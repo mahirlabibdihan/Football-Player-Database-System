@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.controller.PlayerDetails">
+   <children>
+      <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" onMouseDragged="#drag" onMousePressed="#press" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+               <children>
+                  <FontAwesomeIconView fx:id="BACK" fill="WHITE" glyphName="ARROW_LEFT" onMouseClicked="#back">
+                     <HBox.margin>
+                        <Insets right="530.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" size="15">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+               </children>
+            </HBox>
+            <AnchorPane fx:id="pane" prefHeight="725.0" prefWidth="600.0" style="-fx-background-color: #1a2531; -fx-background-radius: 0 0 10 10; -fx-border-color: #191919; -fx-border-width: 2; -fx-border-radius: 0 0 10 10;">
+               <children>
+                  <AnchorPane layoutX="94.0" layoutY="114.0" prefHeight="1287.0" prefWidth="420.0" style="-fx-background-color: #191919; -fx-background-radius: 25;" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="90.0">
+                     <children>
+                        <ImageView fx:id="playerCard" fitHeight="479.0" fitWidth="329.0" layoutX="25.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="35.0">
+                           <image>
+                              <Image url="@../images/326ac4640667320af9923423584133d2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="face" fitHeight="212.0" fitWidth="216.0" layoutX="118.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="club" fitHeight="45.0" fitWidth="51.0" layoutX="108.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="112.0" />
+                        <ImageView fx:id="country" fitHeight="30.0" fitWidth="51.0" layoutX="108.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="108.0" />
+                        <Label fx:id="name" alignment="CENTER" layoutX="85.0" layoutY="285.0" prefHeight="45.0" prefWidth="247.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="285.0" />
+                        <Label fx:id="number" alignment="CENTER" layoutX="107.0" layoutY="117.0" prefHeight="68.0" prefWidth="70.0" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="240.0" />
+                        <Label fx:id="weeklySalary" layoutX="210.0" layoutY="350.0" prefHeight="30.0" prefWidth="96.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="350.0" />
+                        <Label fx:id="age" alignment="CENTER_RIGHT" layoutX="95.0" layoutY="395.0" prefHeight="30.0" prefWidth="70.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="217.0" AnchorPane.topAnchor="390.0" />
+                        <Label fx:id="height" layoutX="210.0" layoutY="395.0" prefHeight="30.0" prefWidth="87.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="390.0" />
+                        <Label fx:id="position" alignment="CENTER_RIGHT" layoutX="88.0" layoutY="350.0" prefHeight="30.0" prefWidth="61.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="217.0" AnchorPane.topAnchor="350.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

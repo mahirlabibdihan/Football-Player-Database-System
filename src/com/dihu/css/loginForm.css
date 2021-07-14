@@ -1,0 +1,26 @@
+#exitButton , #loginButton{
+    -fx-border-color:  #2ecc71;
+    -fx-background-color: transparent;
+    -fx-font-size: 12;
+}
+
+#exitButton:hover , #loginButton:hover{
+    -fx-background-radius: 25;
+    -fx-background-color:  #2ecc71;
+    -fx-font-style: italic;
+    -fx-text-fill: #191919;
+}
+
+#clubNameEntry , #passwordEntry{
+    -fx-pref-width: 280;
+    -fx-max-width: 280;
+    -fx-border-color:  #3498db;
+    -fx-prompt-text-fill: #505050;
+}
+
+#clubNameEntry:focused , #passwordEntry:focused{
+    -fx-pref-width: 330;
+    -fx-max-width: 330;
+    -fx-border-color:  #2ecc71;
+
+}

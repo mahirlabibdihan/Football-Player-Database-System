@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.dihu.controller.AuctionPlayerDetails"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label alignment="CENTER" layoutX="20.0" layoutY="82.0" prefHeight="50.0" prefWidth="172.0" text="COUNTRY" AnchorPane.topAnchor="110.0" />
+        <Label alignment="CENTER" layoutX="20.0" layoutY="143.0" prefHeight="50.0" prefWidth="172.0" text="AGE" AnchorPane.topAnchor="180.0" />
+        <Label alignment="CENTER" layoutX="20.0" layoutY="230.0" prefHeight="50.0" prefWidth="172.0" text="HEIGHT" AnchorPane.topAnchor="250.0" />
+        <Label alignment="CENTER" layoutX="20.0" layoutY="268.0" prefHeight="50.0" prefWidth="172.0" text="CLUB" AnchorPane.topAnchor="320.0" />
+        <Label alignment="CENTER" layoutX="20.0" layoutY="359.0" prefHeight="50.0" prefWidth="172.0" text="POSITION" AnchorPane.topAnchor="390.0" />
+        <Label alignment="CENTER" layoutX="20.0" layoutY="430.0" prefHeight="50.0" prefWidth="172.0" text="NUMBER" AnchorPane.topAnchor="460.0" />
+        <Label alignment="CENTER" layoutX="20.0" layoutY="530.0" prefHeight="50.0" prefWidth="172.0" text="Weekly Salary" AnchorPane.topAnchor="530.0" />
+        <Label fx:id="name" alignment="CENTER" layoutX="21.0" layoutY="36.0" prefHeight="70.0" prefWidth="559.0" textFill="YELLOW" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+        <Label fx:id="country" alignment="CENTER" layoutX="210.0" layoutY="80.0" prefHeight="50.0" prefWidth="370.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="110.0" />
+        <Label fx:id="age" alignment="CENTER" layoutX="210.0" layoutY="140.0" prefHeight="50.0" prefWidth="370.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
+        <Label fx:id="height" alignment="CENTER" layoutX="210.0" layoutY="200.0" prefHeight="50.0" prefWidth="370.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0" />
+        <Label fx:id="club" alignment="CENTER" layoutX="210.0" layoutY="320.0" prefHeight="50.0" prefWidth="370.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="320.0" />
+        <Label fx:id="position" alignment="CENTER" layoutX="210.0" layoutY="390.0" prefHeight="50.0" prefWidth="370.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="390.0" />
+        <Label fx:id="number" alignment="CENTER" layoutX="210.0" layoutY="460.0" prefHeight="50.0" prefWidth="370.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="460.0" />
+        <Label fx:id="weeklySalary" alignment="CENTER" layoutX="210.0" layoutY="530.0" prefHeight="50.0" prefWidth="370.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="530.0" />
+        <Button fx:id="BACK" layoutX="20.0" layoutY="548.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="172.0" text="BACK" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+        <Button layoutX="260.0" layoutY="693.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="370.0" onAction="#buy" text="BUY" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0" />
+    </children>
+</AnchorPane>
