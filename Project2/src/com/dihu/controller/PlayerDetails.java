@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -19,6 +20,9 @@ import java.io.IOException;
 public class PlayerDetails extends Controller {
 
     private Player p;
+
+    @FXML
+    private Label errorLabel;
 
     @FXML
     private Button buyButton;
@@ -50,14 +54,24 @@ public class PlayerDetails extends Controller {
     @FXML
     private Label height;
 
-    public void sell(ActionEvent actionEvent) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scene/SellMenu.fxml"));
-        Parent root = loader.load();
+    @FXML
+    private TextField priceEntry;
 
-        SellMenu controller = (SellMenu)loader.getController();
+
+    public void sell(ActionEvent actionEvent) throws Exception {
+        try {p.setPrice(Double.parseDouble(priceEntry.getText()));
+        System.out.println(p.getPrice());
+        client.getNetworkUtil().write(new Pair<>(client.getClub().getName(),p));
+        client.getClub().removePlayer(client.getClub().searchPlayerByName(p.getName()));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scene/SellPlayerList.fxml"));
+        Parent root = loader.load();
+        Controller controller = loader.getController();
         controller.setClient(client);
-        controller.setPlayerName(name.getText());
         client.getScene().setRoot(root);
+        } catch (Exception e) {
+            errorLabel.setText("Invalid input");
+        }
     }
 
     public void buy(ActionEvent actionEvent) throws IOException {
@@ -69,6 +83,16 @@ public class PlayerDetails extends Controller {
         Controller controller = loader.getController();
         controller.setClient(client);
         client.getScene().setRoot(root);
+    }
+
+    public void cancel(ActionEvent mouseEvent) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(prevFXML));
+        Parent root = loader.load();
+
+        Controller controller = (Controller)loader.getController();
+        controller.setClient(client);
+
+        ((Node)mouseEvent.getSource()).getScene().setRoot(root);
     }
     @FXML
     public void initialize(){
@@ -88,7 +112,7 @@ public class PlayerDetails extends Controller {
         number.setText(Integer.toString(p.getNumber()));
 
         try{
-            buyButton.setText(String.format("%.1f",p.getPrice())+"$");
+            buyButton.setText(String.format("%.1f",p.getPrice())+" $");
             buyButton.addEventHandler(MouseEvent.MOUSE_ENTERED,
                     new EventHandler<MouseEvent>() {
                         @Override
@@ -100,7 +124,7 @@ public class PlayerDetails extends Controller {
                     new EventHandler<MouseEvent>() {
                         @Override
                         public void handle(MouseEvent e) {
-                            buyButton.setText(String.format("%.1f",p.getPrice())+"$");
+                            buyButton.setText(String.format("%.1f",p.getPrice())+" $");
                         }
                     });
         }catch(Exception e){

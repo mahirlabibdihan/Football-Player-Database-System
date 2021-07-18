@@ -38,15 +38,15 @@ public class SellPlayerList extends Controller {
                 @Override
                 public void handle(ActionEvent e) {
                     try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scene/SellMenu.fxml"));
-                        Parent root = loader.load();
                         Player p = client.getClub().searchPlayerByName(((Button)e.getSource()).getText());
                         Player.player = p;
-                        SellMenu controller = (SellMenu)loader.getController();
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scene/SellMenu.fxml"));
+                        Parent root = loader.load();
+                        PlayerDetails controller = (PlayerDetails)loader.getController();
                         controller.setClient(client);
-                        System.out.println("Name: "+((Button)e.getSource()).getText());
-                        controller.setPlayerName(p.getName());
+                        controller.setPrevFXML("../Scene/SellPlayerList.fxml");
                         client.getScene().setRoot(root);
+                        root.requestFocus();
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }
