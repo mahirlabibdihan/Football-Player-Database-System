@@ -86,7 +86,7 @@ public class PlayersMenu extends Controller {
                         PlayerDetails controller = loader.getController();
                         controller.setClient(client);
                         controller.setPrevFXML("../Scene/PlayersMenu.fxml");
-                        ((Button)e.getSource()).getScene().setRoot(root);
+                        client.getScene().setRoot(root);
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }

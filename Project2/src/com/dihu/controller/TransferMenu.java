@@ -1,5 +1,4 @@
 package com.dihu.controller;
-import com.dihu.classes.Player;
 import com.dihu.client.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,12 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class TransferMenu extends Controller {
     @FXML
@@ -44,7 +39,7 @@ public class TransferMenu extends Controller {
     }
 
     public void sell(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Scene/PlayersList.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scene/SellPlayerList.fxml"));
         Parent root = loader.load();
 
         Controller controller = loader.getController();

@@ -2,16 +2,27 @@ package com.dihu.controller;
 
 import com.dihu.classes.Player;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.util.Pair;
+
+import java.io.IOException;
 
 public class PlayerDetails extends Controller {
+
+    private Player p;
+
+    @FXML
+    private Button buyButton;
+
     @FXML
     private Label weeklySalary;
 
@@ -49,9 +60,19 @@ public class PlayerDetails extends Controller {
         client.getScene().setRoot(root);
     }
 
+    public void buy(ActionEvent actionEvent) throws IOException {
+        client.getNetworkUtil().write(new Pair<>(client.getClub().getName(),p));
+        p.setClub(client.getClub().getName());
+        client.getClub().addPlayer(p);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Scene/MainMenu.fxml"));
+        Parent root = loader.load();
+        Controller controller = loader.getController();
+        controller.setClient(client);
+        client.getScene().setRoot(root);
+    }
     @FXML
     public void initialize(){
-        Player p = Player.player;
+        p = Player.player;
         name.setText(p.getName().toUpperCase());
         System.out.println("../images/face/"+p.getName()+".png");
         face.setImage(new Image(getClass().getResource("../images/face/"+p.getName()+".png").toExternalForm()));
@@ -65,6 +86,28 @@ public class PlayerDetails extends Controller {
         weeklySalary.setText(Double.toString(p.getWeeklySalary())+" $");
 
         number.setText(Integer.toString(p.getNumber()));
+
+        try{
+            buyButton.setText(String.format("%.1f",p.getPrice())+"$");
+            buyButton.addEventHandler(MouseEvent.MOUSE_ENTERED,
+                    new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent e) {
+                            buyButton.setText("BUY");
+                        }
+                    });
+            buyButton.addEventHandler(MouseEvent.MOUSE_EXITED,
+                    new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent e) {
+                            buyButton.setText(String.format("%.1f",p.getPrice())+"$");
+                        }
+                    });
+        }catch(Exception e){
+
+        }
+
+
     }
 
 }

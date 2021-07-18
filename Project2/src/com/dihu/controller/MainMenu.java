@@ -25,7 +25,7 @@ public class MainMenu extends Controller {
         sceneMap.put("SEARCH_PLAYERS","../Scene/PlayersMenu.fxml");
         sceneMap.put("SEARCH_CLUBS","../Scene/ClubMenu.fxml");
         sceneMap.put("ADD_PLAYER","../Scene/TransferMenu.fxml");
-        sceneMap.put("LIST_PLAYER","../Scene/PlayersList.fxml");
+        sceneMap.put("LIST_PLAYER","../Scene/SellPlayerList.fxml");
     }
     public void exit(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../Scene/LoginForm.fxml"));

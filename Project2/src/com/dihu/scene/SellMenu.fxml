@@ -34,7 +34,7 @@
                         <children>
                             <Label fx:id="player_name" alignment="CENTER" layoutX="126.0" layoutY="60.0" maxHeight="-Infinity" prefHeight="86.0" prefWidth="416.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                                 <font>
-                                    <Font name="Times New Roman Bold" size="36.0" />
+                                    <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                                 </font>
                            <padding>
                               <Insets top="40.0" />

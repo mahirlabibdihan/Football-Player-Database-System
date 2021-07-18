@@ -28,8 +28,6 @@ public class SellPlayerList extends Controller {
     private AnchorPane playerListPane;
 
     public void printPlayers(List<Player> searchedPlayers){
-        float height= 45;
-        playerListPane.setPrefHeight(searchedPlayers.size()*(height+20)+20);
         VBox list = new VBox();
         AnchorPane.setLeftAnchor(list, 5.0);
         list.setSpacing(20);
@@ -88,7 +86,7 @@ public class SellPlayerList extends Controller {
     @Override
     public void setClient(Client client) {
         this.client = client;
-        client.setFileName("PlayersList.fxml");
+        client.setFileName("SellPlayerList.fxml");
         Club c = client.getClub();
         try{
             playerList= c.getPlayerList();

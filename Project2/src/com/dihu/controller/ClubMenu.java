@@ -20,6 +20,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -53,39 +54,6 @@ public class ClubMenu extends Controller
         buttons = new ArrayList<Button>();
         SEARCH_OPTION = new ComboBox<>();
     }
-    public void printPlayers(List<Player> searchedPlayers){
-        for(int i=0;i<searchedPlayers.size();i++){
-            Button b = new Button(SEARCH_OPTION.getValue());
-            b.setText(searchedPlayers.get(i).getName());
-            b.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent e) {
-                    try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("PlayerDetails.fxml"));
-                        Player p = client.getClub().searchPlayerByName(((Button)e.getSource()).getText());
-                        Player.player = p;
-                        Parent root = loader.load();
-
-                        PlayerDetails controller = loader.getController();
-                        controller.setClient(client);
-
-                        ((Button)e.getSource()).getScene().setRoot(root);
-                    } catch (IOException ioException) {
-                        ioException.printStackTrace();
-                    }
-                }
-            });
-            float height= Math.min((float) (540.0/searchedPlayers.size()),50);
-            AnchorPane.setLeftAnchor(b, 20.0);
-            AnchorPane.setRightAnchor(b, 20.0);
-            AnchorPane.setTopAnchor(b, 90.0 + i*(1.2*height));
-            b.setPrefHeight(height);
-            b.setId("player-button");
-            b.setStyle("-fx-font-size: "+Math.min(22,height-10)+"px;");
-            buttons.add(b);
-            playerSearchPane.getChildren().add(b);
-        }
-    }
 
     @FXML
     public void back(MouseEvent mouseEvent) throws Exception {
@@ -112,8 +80,6 @@ public class ClubMenu extends Controller
             public void changed(ObservableValue<? extends Object> observableValue, Object o, Object t1) {
                 String currentFilter = (String) filterSpinner.getValue();
                 anchorPane.getChildren().clear();
-                scrollPane.setPrefHeight(90);
-                anchorPane.setPrefHeight(88);
                 if(currentFilter.equals("TOTAL YEARLY SALARY")){
                     try{
                         double total = client.getClub().getTotalYearlySalary();
@@ -144,11 +110,12 @@ public class ClubMenu extends Controller
 
                     Map<String,Integer> count = new HashMap<>();
                     client.getClub().getCountryWisePlayerCount(count);
-                    scrollPane.setPrefHeight(280);
                     float height= 65;
                     if(count.size()>0) {
-                        anchorPane.setPrefHeight(count.size()*(height+20));
                         int i=0;
+                        VBox list = new VBox();
+                        AnchorPane.setLeftAnchor(list, 60.0);
+                        list.setSpacing(20);
                         for (Map.Entry<String, Integer> m : count.entrySet()) {
                             Label l1 = new Label(m.getKey());
                             Label l2 = new Label(Integer.toString(m.getValue()));
@@ -174,11 +141,10 @@ public class ClubMenu extends Controller
                             HBox row = new HBox(country,l1,l2);
                             row.setAlignment(Pos.CENTER_LEFT);
                             row.setSpacing(15);
-                            AnchorPane.setLeftAnchor(row, 60.0);
-                            AnchorPane.setTopAnchor(row, i*(height+20.0));
-                            anchorPane.getChildren().add(row);
+                            list.getChildren().add(row);
                             i++;
                         }
+                        anchorPane.getChildren().add(list);
                     }
                     else {
                         System.out.println("No player in the database");

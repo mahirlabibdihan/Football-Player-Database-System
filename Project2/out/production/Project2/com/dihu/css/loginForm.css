@@ -1,7 +1,7 @@
 #exitButton , #loginButton{
     -fx-border-color:  #2ecc71;
     -fx-background-color: transparent;
-    -fx-font-size: 12;
+    -fx-font-size: 16;
 }
 
 #exitButton:hover , #loginButton:hover{
@@ -16,12 +16,11 @@
     -fx-max-width: 280;
     -fx-border-color:  #3498db;
     -fx-prompt-text-fill: #505050;
-    -fx-font-size: 14;
+    -fx-font-size: 16;
 }
 
 #clubNameEntry:focused , #passwordEntry:focused{
     -fx-pref-width: 330;
     -fx-max-width: 330;
     -fx-border-color:  #2ecc71;
-
 }

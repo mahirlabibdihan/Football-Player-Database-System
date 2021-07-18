@@ -2,19 +2,14 @@ package com.dihu.controller;
 
 import com.dihu.classes.Player;
 import com.dihu.client.Client;
-import com.dihu.controller.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.util.Pair;
-
-import java.io.IOException;
 
 public class SellMenu extends Controller {
     Player player;
@@ -39,7 +34,7 @@ public class SellMenu extends Controller {
             client.getNetworkUtil().write(new Pair<>(client.getClub().getName(),player));
             client.getClub().removePlayer(client.getClub().searchPlayerByName(player.getName()));
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Scene/PlayersList.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../scene/SellPlayerList.fxml"));
             Parent root = loader.load();
             Controller controller = loader.getController();
             controller.setClient(client);

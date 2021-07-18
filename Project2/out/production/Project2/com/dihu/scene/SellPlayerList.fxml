@@ -38,7 +38,7 @@
                     <children>
                         <Label alignment="CENTER" layoutX="126.0" layoutY="60.0" maxHeight="-Infinity" prefHeight="114.0" prefWidth="416.0" text="PLAYERS" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                             <font>
-                                <Font name="Times New Roman Bold" size="36.0" />
+                                <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                             </font></Label>
                         <ScrollPane prefHeight="395.0" prefWidth="416.0" style="-fx-background: #191919; -fx-background-color: #191919;">
                           <content>

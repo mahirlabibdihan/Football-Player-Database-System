@@ -5,14 +5,12 @@
 
 .root{
     -fx-background-color: #191919;
-    -fx-font-family: sans-serif;
-    -fx-font-weight: bold;
+
 }
 
 .label{
     -fx-background-color: transparent;
     -fx-font-weight: bold;
-    -fx-font-family: 'squareFont';
 }
 .text-field{
     -fx-text-fill: white;
@@ -27,7 +25,7 @@
     -fx-border-color:  #2ecc71;
     -fx-background-color: transparent;
     -fx-text-fill: white;
-    -fx-font-size: 12;
+    -fx-font-size: 16;
     -fx-cursor: hand;
     -fx-font-family: squareFont;
     -fx-font-weight: bold;
@@ -176,7 +174,15 @@
     -fx-fill: red;
 }
 
+#buyPlayer{
+    -fx-font-size: 12;
+}
 #buyPlayer:hover{
     -fx-background-color: #2ecc71;
     -fx-background-radius: 50 0 0 50;
+}
+
+#filterSpinner .text-field{
+    -fx-font-size: 16;
+    -fx-font-family: "Berlin Sans FB Demi";
 }
