@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e28826e9-e9a2-4a8c-a99b-aa685767cccb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Player_Database_CSE_108_L1_T2_TermProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project2/Project2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project2/out/production/Project2/Project2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project2/src/Project2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cssdialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFX/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/IO/Color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/IO/Console.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/SearchBar.fontawesomefx-glyphsbrowser-1.3.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/classes/Club.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/classes/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/client/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/client/ReadThreadClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/client/ReadThreadClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/AddPlayer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/AddPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/Auction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/AuctionPlayerDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/AuctionPlayerList$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/AuctionPlayerList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/AuctionThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/LoginForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/MainMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/PlayerDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/PlayerList$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/PlayerList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/PlayerSell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/SearchClubsMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/SearchClubsMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/SearchClubsMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/SearchPlayersMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/SearchPlayersMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/controller/SearchPlayersMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/css/Application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/css/MainMenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/css/SearchPlayersMenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/css/loginForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/fontawesomefx-8.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/fontawesomefx-commons-9.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/fontawesomefx-fontawesome-4.7.0-9.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/326ac4640667320af9923423584133d2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Club/Arsenal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Club/Chelsea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Club/Liverpool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Club/Manchester City.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Club/Manchester United.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Belgium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Brazil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Egypt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/England.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/France.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Gabon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Germany.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Ghana.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Italy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Netherlands.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Portugal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Senegal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Spain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Switzerland.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Country/Uruguay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Alisson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Bernd Leno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Bruno Fernandes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Cesar Azpilicueta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/David de Gea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Ederson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Edinson Cavani.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Edouard Mendy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Granit Xhaka.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Harry Maguire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Hector Bellerin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Ilkay Gundogan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Jordan Henderson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Jorginho.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Kevin De Bruyne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Mohamed Salah.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/N'Golo Kante.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Paul Pogba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Pierre-Emerick Aubameyang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Raheem Sterling.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Ruben Dias.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Thiago Alcantaram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Thomas Partey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Timo Werner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/images/Face/Virgil van Dijk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/jar_files.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/jfoenix-9.0.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/AddPlayer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/Auction.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/AuctionPlayerDetails.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/AuctionPlayerList.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/LoginForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/MainMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/PlayerCard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/PlayerDetails.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/PlayerSell.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/PlayersList.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/SearchClubsMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/SearchPlayersMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/scene/searchBoxLabelIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/server/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/server/ReadThreadServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/server/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/server/players.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/util/LoginDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project2/com/dihu/util/NetworkUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/IO/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/IO/Console.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/SearchBar.fontawesomefx-glyphsbrowser-1.3.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/classes/Club.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/classes/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/client/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/client/ReadThreadClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/AddPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/Auction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/AuctionPlayerDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/AuctionPlayerList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/AuctionThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/LoginForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/MainMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/PlayerDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/PlayerList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/PlayerSell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/SearchClubsMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/controller/SearchPlayersMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/css/Application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/css/MainMenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/css/SearchPlayersMenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/css/loginForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/fontawesomefx-8.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/fontawesomefx-commons-9.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/fontawesomefx-fontawesome-4.7.0-9.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/326ac4640667320af9923423584133d2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Club/Arsenal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Club/Chelsea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Club/Liverpool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Club/Manchester City.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Club/Manchester United.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Belgium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Brazil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Egypt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/England.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/France.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Gabon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Germany.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Ghana.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Italy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Netherlands.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Portugal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Senegal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Spain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Switzerland.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Country/Uruguay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Alisson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Bernd Leno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Bruno Fernandes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Cesar Azpilicueta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/David de Gea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Ederson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Edinson Cavani.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Edouard Mendy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Granit Xhaka.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Harry Maguire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Hector Bellerin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Ilkay Gundogan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Jordan Henderson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Jorginho.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Kevin De Bruyne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Mohamed Salah.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/N'Golo Kante.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Paul Pogba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Pierre-Emerick Aubameyang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Raheem Sterling.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Ruben Dias.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Thiago Alcantaram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Thomas Partey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Timo Werner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/images/Face/Virgil van Dijk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/jar_files.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/jfoenix-9.0.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/AddPlayer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/Auction.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/AuctionPlayerDetails.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/AuctionPlayerList.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/LoginForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/MainMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/PlayerCard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/PlayerDetails.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/PlayerSell.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/PlayersList.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/SearchClubsMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/SearchPlayersMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/scene/searchBoxLabelIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/server/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/server/ReadThreadServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/server/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/server/players.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/util/LoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dihu/util/NetworkUtil.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1vSAnpzg16C2Z5w2dmrIUVQCiZd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Project2/src/com/dihu/fontawesomefx-fontawesome-4.7.0-9.1.2.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e28826e9-e9a2-4a8c-a99b-aa685767cccb" name="Default Changelist" comment="" />
+      <created>1626545298407</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626545298407</updated>
+      <workItem from="1626545307747" duration="248000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

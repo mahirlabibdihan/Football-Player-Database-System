@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.controller.SellMenu">
+    <children>
+    <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <HBox alignment="CENTER_RIGHT" onMouseDragged="#drag" onMousePressed="#press" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+                <children>
+                    <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" size="15">
+                        <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </HBox.margin>
+                    </FontAwesomeIconView>
+                    <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15">
+                        <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                        </HBox.margin>
+                    </FontAwesomeIconView>
+                </children>
+            </HBox>
+            <AnchorPane fx:id="pane" prefHeight="725.0" prefWidth="600.0" style="-fx-background-color: #1a2531; -fx-background-radius: 0 0 10 10; -fx-border-color: #191919; -fx-border-width: 2; -fx-border-radius: 0 0 10 10;">
+                <children>
+                    <VBox layoutX="250.0" layoutY="241.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #191919; -fx-background-radius: 25;" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="220.0">
+                        <children>
+                            <Label fx:id="player_name" alignment="CENTER" layoutX="126.0" layoutY="60.0" maxHeight="-Infinity" prefHeight="86.0" prefWidth="416.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                <font>
+                                    <Font name="Times New Roman Bold" size="36.0" />
+                                </font>
+                           <padding>
+                              <Insets top="40.0" />
+                           </padding></Label>
+                        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="30.0" prefWidth="641.0" textFill="RED" />
+                        <TextField fx:id="price_entry" alignment="CENTER" prefHeight="45.0" prefWidth="416.0" promptText="Enter player's price" style="-fx-background-color: translate; -fx-border-color: #3498db; -fx-border-radius: 50; -fx-border-width: 2;">
+                           <VBox.margin>
+                              <Insets left="70.0" right="70.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                        <HBox prefHeight="45.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="exitButton" onAction="#back" prefHeight="139.0" prefWidth="130.0" style="-fx-border-color: #2ecc71; -fx-border-radius: 25; -fx-border-width: 2;" text="Cancel" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="70.0" right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="loginButton" onAction="#sell" prefHeight="161.0" prefWidth="130.0" style="-fx-border-color: #2ecc71; -fx-border-radius: 25; -fx-border-width: 2;" text="Sell" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="70.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </AnchorPane>
+        </children>
+    </VBox>
+</children>
+</AnchorPane>

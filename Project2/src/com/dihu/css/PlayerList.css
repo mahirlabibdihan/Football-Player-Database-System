@@ -1,0 +1,16 @@
+#sellPlayerButton{
+    -fx-border-radius: 50;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: sans-serif;
+    -fx-font-size: 12;
+    -fx-border-color:  #3498db;
+    -fx-border-width: 2;
+    -fx-pref-width: 280;
+    -fx-pref-height: 45;
+}
+#sellPlayerButton:hover{
+    -fx-background-color: #3498db;
+    -fx-text-fill: black;
+    -fx-font-style: italic;
+}

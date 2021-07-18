@@ -4,10 +4,7 @@
       <root url="file://E:/Installed/Java/javafx-sdk-11.0.2/lib" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="file://E:/Installed/Java/javafx-sdk-11.0.2/lib" />
-    </SOURCES>
+    <SOURCES />
     <jarDirectory url="file://E:/Installed/Java/javafx-sdk-11.0.2/lib" recursive="false" />
-    <jarDirectory url="file://E:/Installed/Java/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
   </library>
 </component>
