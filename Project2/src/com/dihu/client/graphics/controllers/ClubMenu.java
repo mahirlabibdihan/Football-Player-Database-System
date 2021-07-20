@@ -110,8 +110,6 @@ public class ClubMenu extends Controller {
                     showTotalYearlySalary();
                 } else if (currentFilter.equals("COUNTRY WISE PLAYER COUNT")) {
                     showCountryWisePlayerCount();
-                } else if (currentFilter.equals("")) {
-
                 }
             }
         });

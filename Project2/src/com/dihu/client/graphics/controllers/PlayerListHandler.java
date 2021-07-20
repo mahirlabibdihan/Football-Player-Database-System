@@ -92,6 +92,7 @@ public class PlayerListHandler implements EventHandler<ActionEvent> {
     }
 
     public void setAuctionPlayerList(List<Player> auctionPlayerList) {
+        System.out.println("Auction player list set");
         this.auctionPlayerList = auctionPlayerList;
     }
 

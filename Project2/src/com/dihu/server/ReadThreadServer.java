@@ -22,7 +22,6 @@ public class ReadThreadServer implements Runnable {
         try {
             while (true) {
                 Object o = networkUtil.read();
-                System.out.println("Server Received");
                 if (o != null) {
                     if (o instanceof LoginDTO) {
                         LoginDTO loginDTO = (LoginDTO) o;
@@ -44,22 +43,16 @@ public class ReadThreadServer implements Runnable {
                         Club c = server.getDatabase().searchClubByName(club);
                         Player player = (Player) pr.getValue();
 
-                        System.out.println("NAME: " + player);
                         if (c.searchPlayerByName(player.getName()) == null) {
                             Player p = server.getDatabase().searchPlayerByName(player.getName());
                             p.setClub(c.getName());
-
                             p.setPrice(0);
                             c.addPlayer(p);
-                            System.out.println(p.getClub());
                             server.getDatabase().getOnSell().remove(p);
                         } else {
                             Player p = c.searchPlayerByName(player.getName());
-                            System.out.println("FOUND: " + p.getName());
                             c.removePlayer(p);
-                            System.out.println("Removed: " + p.getName());
                             server.getDatabase().addPlayerOnSell(player);
-                            System.out.println("Auctioned: " + p.getName());
                         }
                         networkUtil.write(c);
 
@@ -67,19 +60,15 @@ public class ReadThreadServer implements Runnable {
                             try {
                                 server.getClientList().get(i).write(server.getDatabase().getOnSell());
                             } catch (Exception e) {
-                                server.getClientList().remove(i);
-                                i--;
-                                System.out.println("REMOVED: " + server.getClientList().size());
+                                server.getClientList().remove(i--);
                             }
                         }
                         System.out.println("Sold");
                     }
-                } else {
-                    System.out.println("Server reading error: NULL POINTER");
                 }
             }
         } catch (Exception e) {
-            System.out.println("Server reading error: " + e);
+            System.out.println("Client left");
         } finally {
             try {
                 networkUtil.closeConnection();

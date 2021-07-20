@@ -15,9 +15,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.io.IOException;
-
-
 public class Client extends Application {
     private Club club;
     private Scene scene;
@@ -38,9 +35,6 @@ public class Client extends Application {
         return playerListHandler;
     }
 
-    public void setPlayerListHandler(PlayerListHandler playerListHandler) {
-        this.playerListHandler = playerListHandler;
-    }
     public void setClub(Club club){
         this.club = club;
         playerListHandler.setPlayerList(club.getPlayerList());
@@ -59,14 +53,12 @@ public class Client extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("graphics/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
         Parent root = loader.load();
 
-        LoginForm controller = loader.getController();
+        Controller controller = loader.getController();
         controller.setClient(this);
 
-        // Scene
         scene = new Scene(root, 600, 750);
         scene.setFill(Color.TRANSPARENT);
 
-        // Stage
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setTitle("Player Database");
         primaryStage.setScene(scene);
@@ -83,7 +75,7 @@ public class Client extends Application {
         new ReadThreadClient(this,networkUtil);
     }
 
-    public void updateScene() throws IOException {
+    public void updateScene() throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("graphics/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
         Parent root = loader.load();
         Controller controller = loader.getController();
