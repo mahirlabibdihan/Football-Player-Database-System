@@ -18,22 +18,24 @@ import java.util.List;
 
 public class PlayerListHandler implements EventHandler<ActionEvent> {
     private Client client;
-    private List<Player> playerList,auctionPlayerList;
+    private List<Player> playerList, auctionPlayerList;
 
-    public PlayerListHandler(Client client){
+    public PlayerListHandler(Client client) {
         this.client = client;
     }
+
     public void setClient(Client client) {
         this.client = client;
         System.out.println("CLIENT SET");
     }
-    public VBox getPlayerListUi(){
+
+    public VBox getPlayerListUi() {
         VBox list = new VBox();
         AnchorPane.setLeftAnchor(list, 5.0);
         list.setSpacing(20);
-        for(Player p:playerList){
+        for (Player p : playerList) {
             ImageView country = new ImageView();
-            country.setImage(new Image(getClass().getResource("../assets/images/Player/"+p.getName()+".png").toExternalForm()));
+            country.setImage(new Image(getClass().getResource("../assets/images/face/" + p.getName() + ".png").toExternalForm()));
             country.setFitHeight(45);
             country.setPreserveRatio(true);
 
@@ -41,7 +43,7 @@ public class PlayerListHandler implements EventHandler<ActionEvent> {
             playerButton.setId("player_button");
             playerButton.setOnAction(this);
 
-            HBox row = new HBox(country,playerButton);
+            HBox row = new HBox(country, playerButton);
             row.setPrefHeight(45);
             row.setAlignment(Pos.CENTER_LEFT);
             row.setSpacing(5);
@@ -54,10 +56,10 @@ public class PlayerListHandler implements EventHandler<ActionEvent> {
     public void handle(ActionEvent event) {
         try {
             client.getUi().next();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/"+client.getUi().getCurrentScene().getFileName()+".fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/" + client.getUi().getCurrentScene().getFileName() + ".fxml"));
             Parent root = loader.load();
             PlayerDetails controller = loader.getController();
-            Player p = searchPlayerByName(((JFXButton)event.getSource()).getText());
+            Player p = searchPlayerByName(((JFXButton) event.getSource()).getText());
             controller.setClient(client);
             controller.setPlayer(p);
             controller.setPrice(p.getPrice());

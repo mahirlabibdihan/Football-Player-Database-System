@@ -3,7 +3,7 @@ package com.dihu.client.graphics.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 
-public class  AuctionPlayerList extends Controller{
+public class AuctionPlayerList extends Controller {
     @FXML
     private AnchorPane playerListPane;
 

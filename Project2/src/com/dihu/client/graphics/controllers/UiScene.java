@@ -7,20 +7,25 @@ public class UiScene {
     private UiScene prevScene;
     private List<UiScene> nextScenes;
     private String fileName;
-    public UiScene(String fileName){
+
+    public UiScene(String fileName) {
         this.fileName = fileName;
         nextScenes = new ArrayList<>();
     }
+
     public String getFileName() {
         return fileName;
     }
-    public UiScene getPrevScene(){
+
+    public UiScene getPrevScene() {
         return prevScene;
     }
-    public void setPrevScene(UiScene scene){
+
+    public void setPrevScene(UiScene scene) {
         prevScene = scene;
     }
-    public void addNextScene(UiScene scene){
+
+    public void addNextScene(UiScene scene) {
         UiScene nextScene = scene;
         nextScenes.add(nextScene);
     }

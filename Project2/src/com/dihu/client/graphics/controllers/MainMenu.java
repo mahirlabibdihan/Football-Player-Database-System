@@ -16,6 +16,6 @@ public class MainMenu extends Controller {
 
     @Override
     public void init() {
-        badge.setImage(new Image(getClass().getResource("../assets/images/Club/"+client.getClub().getName()+".png").toExternalForm()));
+        badge.setImage(new Image(getClass().getResource("../assets/images/Club/" + client.getClub().getName() + ".png").toExternalForm()));
     }
 }

@@ -10,9 +10,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 
-public class Controller{
-    protected  Client client;
-    private double x,y;
+public class Controller {
+    protected Client client;
+    private double x, y;
 
     public void setClient(Client client) {
         this.client = client;
@@ -20,9 +20,9 @@ public class Controller{
 
     @FXML
     public void drag(MouseEvent mouseEvent) {
-        Stage stage=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
-        stage.setX(mouseEvent.getScreenX()-x);
-        stage.setY(mouseEvent.getScreenY()-y);
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        stage.setX(mouseEvent.getScreenX() - x);
+        stage.setY(mouseEvent.getScreenY() - y);
     }
 
     @FXML
@@ -33,7 +33,7 @@ public class Controller{
 
     @FXML
     public void close(MouseEvent mouseEvent) {
-        Stage stage=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.close();
         Platform.exit();
         System.exit(0);
@@ -41,7 +41,7 @@ public class Controller{
 
     @FXML
     public void minimize(MouseEvent mouseEvent) {
-        Stage stage=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.setIconified(true);
     }
 
@@ -51,12 +51,12 @@ public class Controller{
     }
 
     public void next(ActionEvent actionEvent) throws Exception {
-        JFXButton b=(JFXButton)actionEvent.getSource();
+        JFXButton b = (JFXButton) actionEvent.getSource();
         client.getUi().next(Integer.parseInt(b.getId()));
         client.updateScene();
     }
 
-    public void init(){
+    public void init() {
 
     }
 }

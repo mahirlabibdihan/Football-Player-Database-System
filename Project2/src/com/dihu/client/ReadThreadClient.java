@@ -1,8 +1,6 @@
 package com.dihu.client;
 
-import com.dihu.util.Club;
-import com.dihu.util.Player;
-import com.dihu.util.NetworkUtil;
+import com.dihu.util.*;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
 import java.util.List;
