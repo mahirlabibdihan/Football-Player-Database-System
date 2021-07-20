@@ -1,11 +1,8 @@
 package com.dihu.server;
 
-import com.dihu.classes.Club;
+import com.dihu.server.data.Database;
+import com.dihu.util.Club;
 import com.dihu.util.NetworkUtil;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-
-import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -56,12 +53,6 @@ public class Server {
     }
 
     public static void main(String[] args) throws Exception {
-//        String musicFile = "src/com/dihu/bg.mp3";     // For example
-//
-//        Media sound = new Media(new File(musicFile).toURI().toString());
-//        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-//        mediaPlayer.play();
-//        mediaPlayer.setAutoPlay(true);
         new Server();
     }
 }

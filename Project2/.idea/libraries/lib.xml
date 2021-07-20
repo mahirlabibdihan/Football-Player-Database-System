@@ -5,9 +5,14 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="file://E:/Installed/Java/javafx-sdk-11.0.2/lib" />
+      <root url="jar://E:/Installed/Java/javafx-sdk-11.0.2/src.zip!/javafx.base" />
+      <root url="jar://E:/Installed/Java/javafx-sdk-11.0.2/src.zip!/javafx.controls" />
+      <root url="jar://E:/Installed/Java/javafx-sdk-11.0.2/src.zip!/javafx.fxml" />
+      <root url="jar://E:/Installed/Java/javafx-sdk-11.0.2/src.zip!/javafx.graphics" />
+      <root url="jar://E:/Installed/Java/javafx-sdk-11.0.2/src.zip!/javafx.media" />
+      <root url="jar://E:/Installed/Java/javafx-sdk-11.0.2/src.zip!/javafx.swing" />
+      <root url="jar://E:/Installed/Java/javafx-sdk-11.0.2/src.zip!/javafx.web" />
     </SOURCES>
     <jarDirectory url="file://E:/Installed/Java/javafx-sdk-11.0.2/lib" recursive="false" />
-    <jarDirectory url="file://E:/Installed/Java/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
   </library>
 </component>

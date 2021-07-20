@@ -1,0 +1,39 @@
+.jfx-button{
+    -fx-border-color:  #2ecc71;
+    -fx-background-color: transparent;
+    -fx-background-radius: 25;
+    -fx-font-size: 16;
+    -fx-cursor: hand;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+}
+
+.jfx-button:hover{
+    -fx-background-color:  #2ecc71;
+    -fx-font-style: italic;
+    -fx-text-fill: #191919;
+}
+
+.text-field{
+    -fx-pref-width: 280;
+    -fx-max-width: 280;
+    -fx-border-color:  #3498db;
+    -fx-prompt-text-fill: #505050;
+    -fx-font-size: 16;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+}
+
+.text-field:focused{
+    -fx-pref-width: 330;
+    -fx-max-width: 330;
+    -fx-border-color:  #2ecc71;
+}
+
+.glyph-icon {
+    -fx-fill: white;
+}
+.glyph-icon:hover {
+    -fx-cursor: hand;
+    -fx-fill: red;
+}

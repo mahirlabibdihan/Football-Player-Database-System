@@ -5,7 +5,6 @@ import java.io.Serializable;
 public class LoginDTO implements Serializable {
     private String clubName;
     private String password;
-    private String status;
 
     public String getClubName() {
         return clubName;
@@ -21,13 +20,5 @@ public class LoginDTO implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String isStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }

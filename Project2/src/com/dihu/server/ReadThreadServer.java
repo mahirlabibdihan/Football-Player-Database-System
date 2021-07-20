@@ -1,7 +1,7 @@
 package com.dihu.server;
 
-import com.dihu.classes.Club;
-import com.dihu.classes.Player;
+import com.dihu.util.Club;
+import com.dihu.util.Player;
 import com.dihu.util.LoginDTO;
 import com.dihu.util.NetworkUtil;
 import javafx.util.Pair;
@@ -23,7 +23,6 @@ public class ReadThreadServer implements Runnable {
 
     public void run() {
         try {
-            networkUtil.write(server.getDatabase().getOnSell());
             while (true) {
                 Object o = networkUtil.read();
                 System.out.println("Server Received");
@@ -34,13 +33,12 @@ public class ReadThreadServer implements Runnable {
                             if(server.getClubMap().get(loginDTO.getClubName()).equalsIgnoreCase(loginDTO.getPassword())){
                                 Club c = server.getDatabase().searchClubByName(loginDTO.getClubName());
                                 networkUtil.write(c);
+                                networkUtil.write(server.getDatabase().getOnSell());
+                                System.out.println("Auction Players Sent");
                             }else{
-                                loginDTO.setStatus("Incorrect password");
                                 networkUtil.write(null);
-                                //System.out.println("Incorrect password");
                             }
-                        }catch(Exception e){
-                            loginDTO.setStatus("No such club!");
+                       }catch(Exception e){
                             networkUtil.write(null);
                         }
                     }
@@ -54,7 +52,10 @@ public class ReadThreadServer implements Runnable {
                         if(c.searchPlayerByName(player.getName())==null){
                             Player p = server.getDatabase().searchPlayerByName(player.getName());
                             p.setClub(c.getName());
+
+                            p.setPrice(0);
                             c.addPlayer(p);
+                            System.out.println(p.getClub());
                             server.getDatabase().getOnSell().remove(p);
                         }
                         else{
@@ -65,14 +66,12 @@ public class ReadThreadServer implements Runnable {
                             server.getDatabase().addPlayerOnSell(player);
                             System.out.println("Auctioned: "+p.getName());
                         }
+                        networkUtil.write(c);
 
                         for(int i=0;i<server.getClientList().size();i++){
                             try{
-                                System.out.println(c.getPlayerList().size());
-                                // server.getClientList().get(i).write(c);
                                 server.getClientList().get(i).write(server.getDatabase().getOnSell());
                             }catch(Exception e){
-                                System.out.println(server.getClientList().size());
                                 server.getClientList().remove(i);
                                 i--;
                                 System.out.println("REMOVED: "+server.getClientList().size());
