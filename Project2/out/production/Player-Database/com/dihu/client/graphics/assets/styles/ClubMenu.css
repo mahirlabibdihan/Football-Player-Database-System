@@ -62,3 +62,27 @@
     -fx-cursor: hand;
     -fx-fill: red;
 }
+
+#country-label{
+    -fx-pref-height: 65;
+    -fx-pref-width: 130;
+    -fx-font-size: 22;
+    -fx-text-fill: #3498db;
+    -fx-font-family: "Berlin sans fb demi";
+}
+
+#player-count-label{
+    -fx-alignment: center;
+    -fx-pref-height: 65;
+    -fx-pref-width: 100;
+    -fx-font-size: 22;
+    -fx-text-fill: #2ecc71;
+}
+
+#salary-label{
+    -fx-pref-height: 60;
+    -fx-pref-width: 250;
+    -fx-font-size: 28;
+    -fx-text-fill: #e4c184;
+    -fx-font-family: "Berlin sans fb demi";
+}

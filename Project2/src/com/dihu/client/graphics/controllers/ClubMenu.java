@@ -27,14 +27,7 @@ public class ClubMenu extends Controller {
     public void showTotalYearlySalary() {
         double total = client.getClub().getTotalYearlySalary();
         Label l = new Label(String.format("%f", total));
-
-        l.setStyle(
-                "-fx-pref-height: 60;" +
-                        "-fx-pref-width: 250;" +
-                        "-fx-font-size: 28;" +
-                        "-fx-text-fill: #e4c184;" +
-                        "-fx-font-family: \"Berlin sans fb demi\";"
-        );
+        l.setId("salary-label");
 
         ImageView dollar = new ImageView();
         dollar.setImage(new Image(getClass().getResource("../assets/images/Dollar.png").toExternalForm()));
@@ -57,23 +50,11 @@ public class ClubMenu extends Controller {
             list.setSpacing(20);
             for (Map.Entry<String, Integer> m : count.entrySet()) {
                 Label l1 = new Label(m.getKey());
+                l1.setId("country-label");
+
                 Label l2 = new Label(Integer.toString(m.getValue()));
+                l2.setId("player-count-label");
 
-                l1.setStyle(
-                        "-fx-pref-height: 65;" +
-                                "-fx-pref-width: 130;" +
-                                "-fx-font-size: 22;" +
-                                "-fx-text-fill: #3498db;" +
-                                "-fx-font-family: \"Berlin sans fb demi\";"
-                );
-
-                l2.setStyle(
-                        "-fx-alignment: center;" +
-                                "-fx-pref-height: 65;" +
-                                "-fx-pref-width: 100;" +
-                                "-fx-font-size: 22;" +
-                                "-fx-text-fill: #2ecc71"
-                );
 
                 ImageView country = new ImageView();
                 country.setImage(new Image(getClass().getResource("../assets/images/Country/" + m.getKey() + ".png").toExternalForm()));
