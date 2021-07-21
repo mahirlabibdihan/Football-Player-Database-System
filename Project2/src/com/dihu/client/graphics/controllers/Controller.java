@@ -34,15 +34,19 @@ public class Controller {
     }
 
     @FXML
-    public void close(MouseEvent mouseEvent) throws Exception {
-        if(!client.getUi().getCurrentScene().getFileName().equals("LoginForm")){
+    public void close(MouseEvent mouseEvent) {
+        try{
             client.getNetworkUtil().write(client.getClub().getName());
             client.getNetworkUtil().closeConnection();
+        }catch(Exception e){
+
+        }finally{
+            Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+            stage.close();
+            Platform.exit();
+            System.exit(0);
         }
-        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        stage.close();
-        Platform.exit();
-        System.exit(0);
+
     }
 
     @FXML

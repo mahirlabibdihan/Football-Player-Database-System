@@ -31,7 +31,7 @@ public class PlayerListHandler implements EventHandler<ActionEvent> {
 
     public VBox getPlayerListUi() {
         VBox list = new VBox();
-        AnchorPane.setLeftAnchor(list, 5.0);
+        AnchorPane.setLeftAnchor(list, 10.0);
         list.setSpacing(20);
         for (Player p : playerList) {
             ImageView country = new ImageView();
