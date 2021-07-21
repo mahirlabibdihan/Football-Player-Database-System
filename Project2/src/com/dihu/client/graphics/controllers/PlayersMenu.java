@@ -127,6 +127,7 @@ public class PlayersMenu extends Controller {
                         }
                     });
                 } else if (currentFilter.equals("POSITION")) {
+
                     filterInput.getChildren().clear();
                     Label l = new Label("POSITION");
                     l.setId("positionLabel");
@@ -159,13 +160,21 @@ public class PlayersMenu extends Controller {
                         @Override
                         public void changed(ObservableValue<? extends Object> observableValue, Object o, Object t1) {
                             String position = (String) positionSpinner.getValue();
-                            client.getPlayerListHandler().setPlayerList(client.getClub().searchPlayerByPosition(position));
+
                             errorLabel.setText("");
                             playerListPane.getChildren().clear();
+                            client.getPlayerListHandler().setPlayerList(client.getClub().searchPlayerByPosition(position));
+
+
                             if (client.getPlayerListHandler().getPlayerList().size() > 0) {
                                 playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
                             } else if (!position.equals("")) {
                                 errorLabel.setText("No such player with this position");
+                            } else{
+                                client.getPlayerListHandler().setPlayerList(client.getClub().getPlayerList());
+                                if (client.getPlayerListHandler().getPlayerList().size() > 0) {
+                                    playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
+                                }
                             }
                         }
                     });
@@ -303,111 +312,6 @@ public class PlayersMenu extends Controller {
             }
         });
     }
-
-    public void reset(ActionEvent actionEvent) {
-        filterValueFactory.setValue("");
-        errorLabel.setText("");
-        playerListPane.getChildren().clear();
-        client.getPlayerListHandler().setPlayerList(client.getClub().getPlayerList());
-        if (client.getPlayerListHandler().getPlayerList().size() > 0) {
-            playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-        } else {
-
-        }
-    }
-
-    public void search(ActionEvent actionEvent) {
-        errorLabel.setText("");
-        playerListPane.getChildren().clear();
-        SEARCH_FIELD = (TextField) filterInput.lookup("#nameInputField");
-
-        if (SEARCH_FIELD != null) {
-            System.out.println("Found");
-            System.out.println(SEARCH_FIELD.getText());
-        }
-        String option = (String) filterSpinner.getValue();
-        System.out.println(option);
-        if (option.equals("NAME")) {
-            String name = SEARCH_FIELD.getText();
-            Player p = client.getClub().searchPlayerByName(name);
-
-            if (p != null) {
-                List<Player> playerList = new ArrayList<>();
-                playerList.add(p);
-                client.getPlayerListHandler().setPlayerList(playerList);
-                playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-            } else {
-                errorLabel.setText("No such player with this name");
-            }
-        } else if (option.equals("COUNTRY")) {
-            String country = SEARCH_FIELD.getText();
-            client.getPlayerListHandler().setPlayerList(client.getClub().searchPlayerByCountry(country));
-            if (client.getPlayerListHandler().getPlayerList().size() > 0) {
-                playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-            } else {
-                errorLabel.setText("No such player with this country");
-            }
-        } else if (option.equals("POSITION")) {
-            Spinner positionSpinner = (Spinner) filterInput.lookup("#positionSpinner");
-            String position = (String) positionSpinner.getValue();
-            client.getPlayerListHandler().setPlayerList(client.getClub().searchPlayerByPosition(position));
-            if (client.getPlayerListHandler().getPlayerList().size() > 0) {
-                playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-            } else {
-                errorLabel.setText("No such player with this position");
-            }
-        } else if (option.equals("SALARY")) {
-            TextField from = (TextField) filterInput.lookup("#from");
-            TextField to = (TextField) filterInput.lookup("#to");
-            try {
-                double start = Double.parseDouble(from.getText());
-                double end = Double.parseDouble(to.getText());
-                if (start < 0 || end < 0) {
-                    errorLabel.setText("Must be a Positive double");
-                    return;
-                }
-                ;
-                client.getPlayerListHandler().setPlayerList(client.getClub().searchPlayerBySalaryRange(start, end));
-
-                if (client.getPlayerListHandler().getPlayerList().size() > 0) {
-                    playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-                } else {
-                    errorLabel.setText("No such player with this salary range");
-                }
-            } catch (Exception e) {
-                errorLabel.setText("Must be a double");
-            }
-        } else if (option.equals("MAX SALARY")) {
-            try {
-                client.getPlayerListHandler().setPlayerList(client.getClub().getMaxSalaryPlayer());
-                playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        } else if (option.equals("MAX AGE")) {
-            try {
-                client.getPlayerListHandler().setPlayerList(client.getClub().getMaxAgePlayer());
-                playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        } else if (option.equals("MAX HEIGHT")) {
-            try {
-                client.getPlayerListHandler().setPlayerList(client.getClub().getMaxHeightPlayer());
-                playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        } else {
-            client.getPlayerListHandler().setPlayerList(client.getClub().getPlayerList());
-            if (client.getPlayerListHandler().getPlayerList().size() > 0) {
-                playerListPane.getChildren().add(client.getPlayerListHandler().getPlayerListUi());
-            } else {
-                System.out.println("No player in the club");
-            }
-        }
-    }
-
     @Override
     public void init() {
         Club c = client.getClub();
