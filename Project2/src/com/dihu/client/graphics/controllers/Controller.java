@@ -9,6 +9,8 @@ import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 
 public class Controller {
     protected Client client;
@@ -32,7 +34,11 @@ public class Controller {
     }
 
     @FXML
-    public void close(MouseEvent mouseEvent) {
+    public void close(MouseEvent mouseEvent) throws Exception {
+        if(!client.getUi().getCurrentScene().getFileName().equals("LoginForm")){
+            client.getNetworkUtil().write(client.getClub().getName());
+            client.getNetworkUtil().closeConnection();
+        }
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.close();
         Platform.exit();

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" stylesheets="@../assets/styles/AuctionPlayerList.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.graphics.controllers.AuctionPlayerList">
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" stylesheets="@../assets/styles/AuctionPlayerList.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.graphics.controllers.AuctionPlayerList">
 
     <children>
         <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -37,13 +37,13 @@
                     <children>
                         <VBox layoutX="250.0" layoutY="241.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #191919; -fx-background-radius: 25;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="110.0">
                             <children>
-                                <Label alignment="CENTER" layoutX="126.0" layoutY="60.0" maxHeight="-Infinity" prefHeight="114.0" prefWidth="416.0" text="PLAYERS" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                <Label alignment="CENTER" layoutX="126.0" layoutY="60.0" maxHeight="-Infinity" prefHeight="114.0" prefWidth="416.0" text="AUCTION" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                                     <font>
                                         <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                                     </font></Label>
-                                <ScrollPane prefHeight="395.0" prefWidth="416.0" style="-fx-background: #191919; -fx-background-color: #191919;">
+                                <ScrollPane prefHeight="340.0" prefWidth="416.0" style="-fx-background: #191919; -fx-background-color: #191919;">
                                     <content>
-                                        <AnchorPane fx:id="playerListPane" minHeight="0.0" minWidth="0.0" prefWidth="380.0" style="-fx-background-color: #191919;">
+                                        <AnchorPane fx:id="playerListPane" minHeight="0.0" minWidth="0.0" prefWidth="377.0" style="-fx-background-color: #191919;">
                                             <opaqueInsets>
                                                 <Insets />
                                             </opaqueInsets>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" stylesheets="@../assets/styles/SellPlayerList.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.graphics.controllers.SellPlayerList">
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" stylesheets="@../assets/styles/SellPlayerList.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.graphics.controllers.SellPlayerList">
     <children>
         <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -40,9 +40,9 @@
                             <font>
                                 <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                             </font></Label>
-                        <ScrollPane prefHeight="395.0" prefWidth="416.0" style="-fx-background: #191919; -fx-background-color: #191919;">
+                        <ScrollPane prefHeight="340.0" prefWidth="416.0" style="-fx-background: #191919; -fx-background-color: #191919;">
                           <content>
-                            <AnchorPane fx:id="playerListPane" minHeight="0.0" minWidth="0.0" prefWidth="380.0" style="-fx-background-color: #191919;">
+                            <AnchorPane fx:id="playerListPane" minHeight="0.0" minWidth="0.0" prefWidth="377.0" style="-fx-background-color: #191919;">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>

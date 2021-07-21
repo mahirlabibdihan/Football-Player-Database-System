@@ -2,14 +2,12 @@ package com.dihu.server;
 
 import com.dihu.util.*;
 import javafx.util.Pair;
-
-import java.io.IOException;
+import java.util.Map;
 
 public class ReadThreadServer implements Runnable {
     private final Thread thr;
     private final NetworkUtil networkUtil;
     private Server server;
-
 
     public ReadThreadServer(Server server, NetworkUtil networkUtil) {
         this.server = server;
@@ -23,21 +21,15 @@ public class ReadThreadServer implements Runnable {
             while (true) {
                 Object o = networkUtil.read();
                 if (o != null) {
-                    if (o instanceof LoginDTO) {
-                        LoginDTO loginDTO = (LoginDTO) o;
-                        try {
-                            if (server.getClubMap().get(loginDTO.getClubName()).equalsIgnoreCase(loginDTO.getPassword())) {
-                                Club c = server.getDatabase().searchClubByName(loginDTO.getClubName());
-                                networkUtil.write(c);
-                                networkUtil.write(server.getDatabase().getOnSell());
-                                System.out.println("Auction Players Sent");
-                            } else {
-                                networkUtil.write(null);
-                            }
-                        } catch (Exception e) {
-                            networkUtil.write(null);
+                    if(o instanceof String){
+                        String c = (String) o;
+                        if(server.getClientList().containsKey(c))
+                        {
+                            server.getClientList().remove(c);
+                            System.out.println("Client Removed");
                         }
-                    } else if (o instanceof Pair) {
+                    }
+                    else if (o instanceof Pair) {
                         Pair pr = (Pair) o;
                         String club = (String) pr.getKey();
                         Club c = server.getDatabase().searchClubByName(club);
@@ -56,12 +48,8 @@ public class ReadThreadServer implements Runnable {
                         }
                         networkUtil.write(c);
 
-                        for (int i = 0; i < server.getClientList().size(); i++) {
-                            try {
-                                server.getClientList().get(i).write(server.getDatabase().getOnSell());
-                            } catch (Exception e) {
-                                server.getClientList().remove(i--);
-                            }
+                        for(Map.Entry<String, NetworkUtil> m : server.getClientList().entrySet()){
+                            m.getValue().write(server.getDatabase().getOnSell());
                         }
                         System.out.println("Sold");
                     }
@@ -72,7 +60,7 @@ public class ReadThreadServer implements Runnable {
         } finally {
             try {
                 networkUtil.closeConnection();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
