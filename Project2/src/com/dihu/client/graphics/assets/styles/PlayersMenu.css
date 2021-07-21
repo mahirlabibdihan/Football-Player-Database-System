@@ -43,42 +43,6 @@
     -fx-cursor: hand;
 }
 
-
-.spinner{
-    -fx-base: transparent;
-    -fx-background-color: transparent;
-}
-.spinner:focused{
-    -fx-base: transparent;
-    -fx-background-color: transparent;
-}
-.spinner .text-field{
-    -fx-background-color: transparent;
-    -fx-text-fill: white;
-    -fx-alignment: center;
-    -fx-text-alignment: center;
-    -fx-font-family: sans-serif;
-    -fx-pref-width: 165;
-}
-
-.spinner .increment-arrow-button , .spinner .decrement-arrow-button{
-    -fx-background-color: transparent;
-    -fx-cursor: hand;
-}
-
-.spinner .increment-arrow-JFXButton:hover , .spinner .decrement-arrow-JFXButton:hover{
-
-}
-
-.spinner .increment-arrow , .spinner .decrement-arrow{
-    -fx-pref-height: 10;
-    -fx-pref-width: 10;
-}
-
-.spinner .increment-arrow:hover , .spinner .decrement-arrow:hover{
-    -fx-background-color: red;
-}
-
 #nameInputField{
     -fx-background-color: transparent;
     -fx-pref-width: 280;
@@ -121,6 +85,10 @@
 #positionLabel{
     -fx-text-alignment: center;
     -fx-alignment: center;
+    -fx-pref-width: 110;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
 }
 
 
@@ -139,4 +107,39 @@
 .glyph-icon:hover {
     -fx-cursor: hand;
     -fx-fill: red;
+}
+
+.spinner{
+    -fx-base: transparent;
+    -fx-background-color: transparent;
+}
+.spinner:focused{
+    -fx-base: transparent;
+    -fx-background-color: transparent;
+}
+.spinner .text-field{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-font-family: sans-serif;
+    -fx-pref-width: 165;
+}
+
+.spinner .increment-arrow-button , .spinner .decrement-arrow-button{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.spinner .increment-arrow-JFXButton:hover , .spinner .decrement-arrow-JFXButton:hover{
+
+}
+
+.spinner .increment-arrow , .spinner .decrement-arrow{
+    -fx-pref-height: 10;
+    -fx-pref-width: 10;
+}
+
+.spinner .increment-arrow:hover , .spinner .decrement-arrow:hover{
+    -fx-background-color: red;
 }

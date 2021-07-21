@@ -55,7 +55,6 @@ public class ClubMenu extends Controller {
                 Label l2 = new Label(Integer.toString(m.getValue()));
                 l2.setId("player-count-label");
 
-
                 ImageView country = new ImageView();
                 country.setImage(new Image(getClass().getResource("../assets/images/Country/" + m.getKey() + ".png").toExternalForm()));
                 country.setFitWidth(50);

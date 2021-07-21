@@ -51,11 +51,9 @@ public class UiStructure {
     public UiScene getCurrentScene() {
         return currentScene;
     }
-
     public void back(){
         currentScene = currentScene.getPrevScene();
     }
-
     public void next(int idx){
         currentScene = currentScene.getNextScenes().get(idx);
     }

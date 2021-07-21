@@ -33,7 +33,6 @@ public class PlayerDetails extends Controller {
                 errorLabel.setText("Must be a Positive double");
                 return;
             }
-            ;
             client.getNetworkUtil().write(new Pair<>(client.getClub().getName(), p));
         } catch (Exception e) {
             errorLabel.setText("Must be a double");
