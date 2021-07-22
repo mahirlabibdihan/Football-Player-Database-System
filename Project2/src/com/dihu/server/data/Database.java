@@ -12,34 +12,15 @@ import java.util.List;
 
 public class Database {
     private final String INPUT_FILE_NAME = "src/com/dihu/server/data/players.txt";
-    private final String OUTPUT_FILE_NAME = "src/com/dihu/server/data/players.txt";
     private List<Club> clubList;
-    private List<Player> onSell;
+    private List<Player> auctionPlayerList;
 
     public Database(){
-        onSell = new ArrayList<Player>();
+        auctionPlayerList = new ArrayList<Player>();
     }
 
     public List<Club> getClubList(){
         return clubList;
-    }
-    public void writeToFile() throws Exception {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(OUTPUT_FILE_NAME));
-        for (Club c : clubList) {
-            for (Player p : c.getPlayerList()) {
-                bw.write(
-                        p.getName() + ',' +
-                                p.getCountry() + ',' +
-                                p.getAge() + ',' +
-                                p.getHeight() + ',' +
-                                p.getClub() + ',' +
-                                p.getPosition() + ',' +
-                                p.getNumber() + ',' +
-                                p.getWeeklySalary() + '\n'
-                );
-            }
-        }
-        bw.close();
     }
 
     public void readFromFile() throws Exception {
@@ -94,18 +75,18 @@ public class Database {
         return null;
     }
 
-    public Player searchPlayerByName(String name) {
-        for (Player p : onSell) {
+    public Player searchPlayerByNameInAuction(String name) {
+        for (Player p : auctionPlayerList) {
             if (p.getName().equalsIgnoreCase(name)) {
                 return p;
             }
         }
         return null;
     }
-    public void addPlayerOnSell(Player p){
-        onSell.add(p);
+    public void addPlayerForAuction(Player p){
+        auctionPlayerList.add(p);
     }
-    public List<Player> getOnSell(){
-        return onSell;
+    public List<Player> getAuctionPlayerList(){
+        return auctionPlayerList;
     }
 }

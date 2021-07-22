@@ -9,10 +9,15 @@ public class MainMenu extends Controller {
     @FXML
     private ImageView badge;
 
-    public void logOut(ActionEvent actionEvent) throws Exception {
-        client.getNetworkUtil().write(client.getClub().getName());
-        client.getNetworkUtil().closeConnection();
-        super.back(null);
+    public void logOut(ActionEvent actionEvent){
+        try{
+            client.getNetworkUtil().write(client.getClub().getName());
+            client.getNetworkUtil().closeConnection();
+            super.back(null);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @Override

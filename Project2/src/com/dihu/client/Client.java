@@ -48,40 +48,52 @@ public class Client extends Application {
     public Scene getScene(){
         return scene; }
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("fx/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
-        Parent root = loader.load();
+    public void start(Stage primaryStage){
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("fx/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
+            Parent root = loader.load();
 
-        Controller controller = loader.getController();
-        controller.setClient(this);
+            Controller controller = loader.getController();
+            controller.setClient(this);
 
-        scene = new Scene(root, 600, 750);
-        scene.setFill(Color.TRANSPARENT);
+            scene = new Scene(root, 600, 750);
+            scene.setFill(Color.TRANSPARENT);
 
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
-        primaryStage.setTitle("Player Database");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        root.requestFocus();
+            primaryStage.initStyle(StageStyle.TRANSPARENT);
+            primaryStage.setTitle("Player Database");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            root.requestFocus();
 
-        primaryStage.focusedProperty().addListener((ov, onHidden, onShown) -> primaryStage.getScene().getRoot().requestFocus());
-
+            primaryStage.focusedProperty().addListener((ov, onHidden, onShown) -> primaryStage.getScene().getRoot().requestFocus());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
-    public void connectToServer() throws Exception {
+    public void connectToServer() {
         String serverAddress = "127.0.0.1";
         int serverPort = 33333;
-        networkUtil = new NetworkUtil(serverAddress, serverPort);
-        new ReadThreadClient(this,networkUtil);
+        try {
+            networkUtil = new NetworkUtil(serverAddress, serverPort);
+            new ReadThreadClient(this,networkUtil);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
-    public void updateScene() throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("fx/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
-        Parent root = loader.load();
-        Controller controller = loader.getController();
-        controller.setClient(this);
-        controller.init();
-        scene.setRoot(root);
-        root.requestFocus();
+    public void updateScene() {
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("fx/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
+            Parent root = loader.load();
+            Controller controller = loader.getController();
+            controller.setClient(this);
+            controller.init();
+            scene.setRoot(root);
+            root.requestFocus();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
     public static void main(String[] args){
         launch(args);

@@ -22,6 +22,7 @@ public class ReadThreadServer implements Runnable {
                 Object o = networkUtil.read();
                 if (o != null) {
                     if(o instanceof String){
+                        // Client left from server . So removing it from client list .
                         String c = (String) o;
                         if(server.getClientList().containsKey(c))
                         {
@@ -34,27 +35,28 @@ public class ReadThreadServer implements Runnable {
                         Club c = server.getDatabase().searchClubByName(club);
                         Player player = (Player) pr.getValue();
 
-                        if (c.searchPlayerByName(player.getName()) == null) {
-                            Player p = server.getDatabase().searchPlayerByName(player.getName());
-                            if(p==null){
+                        if (c.searchPlayerByName(player.getName()) == null) {   // Player doesn't exists in the club . That means  the club is trying to buy this player
+                            Player p = server.getDatabase().searchPlayerByNameInAuction(player.getName());
+                            if(p==null) {
                                 networkUtil.write("Player is sold out");
                             }
                             else{
                                 p.setClub(c.getName());
                                 p.setPrice(0);
                                 c.addPlayer(p);
-                                server.getDatabase().getOnSell().remove(p);
+                                server.getDatabase().getAuctionPlayerList().remove(p);
                                 networkUtil.write(c);
                             }
-                        } else {
+                        } else {    // The club is trying to sell this player
                             Player p = c.searchPlayerByName(player.getName());
                             c.removePlayer(p);
-                            server.getDatabase().addPlayerOnSell(player);
+                            server.getDatabase().addPlayerForAuction(player);
                             networkUtil.write(c);
                         }
 
+                        // Updating the auctionPlayerList for every client
                         for(Map.Entry<String, NetworkUtil> m : server.getClientList().entrySet()){
-                            m.getValue().write(server.getDatabase().getOnSell());
+                            m.getValue().write(server.getDatabase().getAuctionPlayerList());
                         }
                     }
                 }

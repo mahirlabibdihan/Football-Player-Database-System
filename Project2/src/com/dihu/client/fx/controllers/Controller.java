@@ -53,12 +53,12 @@ public class Controller {
         stage.setIconified(true);
     }
 
-    public void back(MouseEvent mouseEvent) throws Exception {
+    public void back(MouseEvent mouseEvent){
         client.getUi().back();
         client.updateScene();
     }
 
-    public void next(ActionEvent actionEvent) throws Exception {
+    public void next(ActionEvent actionEvent){
         JFXButton b = (JFXButton) actionEvent.getSource();
         client.getUi().next(Integer.parseInt(b.getId()));
         client.updateScene();

@@ -39,11 +39,15 @@ public class PlayerCard extends Controller {
         }
     }
 
-    public void buy(ActionEvent actionEvent) throws Exception {
-        client.getNetworkUtil().write(new Pair<>(client.getClub().getName(), p));
+    public void buy(ActionEvent actionEvent) {
+        try{
+            client.getNetworkUtil().write(new Pair<>(client.getClub().getName(), p));
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
-    public void cancel(ActionEvent actionEvent) throws Exception {
+    public void cancel(ActionEvent actionEvent) {
         back(null);
     }
 
