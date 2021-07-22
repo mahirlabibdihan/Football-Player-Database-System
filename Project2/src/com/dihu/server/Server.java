@@ -31,19 +31,26 @@ public class Server {
                 try {
                     if (clubMap.get(loginDTO.getClubName()).equals(loginDTO.getPassword())) {
                         Club c = database.searchClubByName(loginDTO.getClubName());
-                        clientList.put(c.getName(),networkUtil);
-                        networkUtil.write(c);
-                        networkUtil.write(database.getOnSell());
+                        if(clientList.containsKey(c.getName())){
+                            networkUtil.write("You are already logged in");
+                            networkUtil.closeConnection();
+                        }else{
+                            clientList.put(c.getName(),networkUtil);
+                            networkUtil.write(c);
+                            networkUtil.write(database.getOnSell());
+                            new ReadThreadServer(this, networkUtil);
+                            System.out.println("Client Connected");
+                        }
                     } else {
-                        networkUtil.write(null);
+                        networkUtil.write("Incorrect password");
+                        networkUtil.closeConnection();
                     }
                 } catch (Exception e) {
-                    networkUtil.write(null);
+                    networkUtil.write("No club with this name");
+                    networkUtil.closeConnection();
                 }
             }
         }
-        new ReadThreadServer(this, networkUtil);
-        System.out.println("Client Connected");
     }
     public void init() throws Exception {
         database = new Database();
@@ -64,7 +71,5 @@ public class Server {
     public Map<String, String> getClubMap() {
         return clubMap;
     }
-    public static void main(String[] args) throws Exception {
-        new Server();
-    }
+    public static void main(String[] args) throws Exception { new Server(); }
 }

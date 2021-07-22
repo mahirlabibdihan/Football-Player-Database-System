@@ -26,7 +26,6 @@ public class ReadThreadServer implements Runnable {
                         if(server.getClientList().containsKey(c))
                         {
                             server.getClientList().remove(c);
-                            System.out.println("Client Removed");
                         }
                     }
                     else if (o instanceof Pair) {
@@ -51,7 +50,6 @@ public class ReadThreadServer implements Runnable {
                         for(Map.Entry<String, NetworkUtil> m : server.getClientList().entrySet()){
                             m.getValue().write(server.getDatabase().getOnSell());
                         }
-                        System.out.println("Sold");
                     }
                 }
             }

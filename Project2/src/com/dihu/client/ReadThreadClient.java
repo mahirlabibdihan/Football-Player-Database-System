@@ -61,15 +61,16 @@ public class ReadThreadClient implements Runnable {
                                 });
                             }
                     }
-                }
-                else{
-                    Platform.runLater(new Runnable() {
+                    else if(o instanceof String){
+                        Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
                                 Label l = (Label)client.getScene().getRoot().lookup("#errorLabel");
-                                l.setText("Invalid credentials");
+                                l.setText((String)o);
                             }
-                    });
+                        });
+                        networkUtil.closeConnection();
+                    }
                 }
             }
         } catch (Exception e) {

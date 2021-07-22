@@ -11,7 +11,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/src/com/dihu/client/graphics/assets/jars/fontawesomefx-fontawesome-4.7.0-9.1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/com/dihu/client/fx/assets/jars/jfoenix-9.0.10.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -20,7 +20,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/src/com/dihu/client/graphics/assets/jars/fontawesomefx-commons-9.1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/com/dihu/client/fx/assets/jars/fontawesomefx-fontawesome-4.7.0-9.1.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -29,7 +29,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/src/com/dihu/jfoenix-9.0.10.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/com/dihu/client/fx/assets/jars/fontawesomefx-commons-9.1.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

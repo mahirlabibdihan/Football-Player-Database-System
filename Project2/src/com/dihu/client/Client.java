@@ -4,7 +4,7 @@
  */
 package com.dihu.client;
 
-import com.dihu.client.graphics.controllers.*;
+import com.dihu.client.fx.controllers.*;
 import com.dihu.util.Club;
 import com.dihu.util.NetworkUtil;
 import javafx.application.Application;
@@ -49,8 +49,7 @@ public class Client extends Application {
         return scene; }
     @Override
     public void start(Stage primaryStage) throws Exception{
-        System.out.println("graphics/scenes/"+ui.getCurrentScene().getFileName()+".fxml");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphics/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fx/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
         Parent root = loader.load();
 
         Controller controller = loader.getController();
@@ -76,7 +75,7 @@ public class Client extends Application {
     }
 
     public void updateScene() throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphics/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fx/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));
         Parent root = loader.load();
         Controller controller = loader.getController();
         controller.setClient(this);

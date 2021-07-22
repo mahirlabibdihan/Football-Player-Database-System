@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" stylesheets="@../assets/styles/SellMenu.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.fx.controllers.PlayerDetails">
+    <children>
+    <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <HBox alignment="CENTER_RIGHT" onMouseDragged="#drag" onMousePressed="#press" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+                <children>
+                    <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" size="15">
+                        <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </HBox.margin>
+                    </FontAwesomeIconView>
+                    <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15">
+                        <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                        </HBox.margin>
+                    </FontAwesomeIconView>
+                </children>
+            </HBox>
+            <AnchorPane fx:id="pane" prefHeight="725.0" prefWidth="600.0" style="-fx-background-color: #1a2531; -fx-background-radius: 0 0 10 10; -fx-border-color: #191919; -fx-border-width: 2; -fx-border-radius: 0 0 10 10;">
+                <children>
+                    <VBox layoutX="250.0" layoutY="241.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #191919; -fx-background-radius: 25;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="10.0">
+                        <children>
+                        <AnchorPane prefHeight="510.0" prefWidth="420.0" style="-fx-background-color: #191919; -fx-background-radius: 25;">
+                           <children>
+                              <ImageView fx:id="playerCard" fitHeight="541.0" fitWidth="353.0" layoutX="32.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="3.0">
+                                 <image>
+                                    <Image url="@../assets/images/card.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="face" fitHeight="224.0" fitWidth="222.0" layoutX="133.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="club" fitHeight="45.0" fitWidth="51.0" layoutX="100.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="103.0" />
+                              <ImageView fx:id="country" fitHeight="30.0" fitWidth="51.0" layoutX="100.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="330.0" AnchorPane.leftAnchor="100.0" />
+                              <Label fx:id="name" alignment="CENTER" layoutX="70.0" layoutY="285.0" prefHeight="45.0" prefWidth="276.0" textFill="#e7d394" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="285.0">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="number" alignment="CENTER" layoutX="83.0" layoutY="99.0" prefHeight="68.0" prefWidth="70.0" textFill="#e7d394" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="247.0" />
+                              <Label fx:id="height" layoutX="210.0" layoutY="350.0" prefHeight="30.0" prefWidth="96.0" textFill="#e7d394" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="360.0" />
+                              <Label fx:id="age" alignment="CENTER_RIGHT" layoutX="95.0" layoutY="395.0" prefHeight="30.0" prefWidth="70.0" textFill="#e7d394" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="217.0" AnchorPane.topAnchor="400.0" />
+                              <Label fx:id="weeklySalary" layoutX="210.0" layoutY="395.0" prefHeight="30.0" prefWidth="87.0" textFill="#e7d394" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="400.0" />
+                              <Label fx:id="position" alignment="CENTER_RIGHT" layoutX="88.0" layoutY="350.0" prefHeight="30.0" prefWidth="61.0" textFill="#e7d394" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="217.0" AnchorPane.topAnchor="360.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="30.0" prefWidth="641.0" textFill="RED">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font></Label>
+                        <TextField id="price-entry" fx:id="priceEntry" alignment="CENTER" prefHeight="45.0" prefWidth="416.0" promptText="Set price" style="-fx-background-color: transparent; -fx-border-color: #3498db; -fx-border-radius: 50; -fx-border-width: 2;">
+                           <VBox.margin>
+                              <Insets left="70.0" right="70.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                        <HBox prefHeight="45.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton onAction="#cancel" prefHeight="139.0" prefWidth="130.0" style="-fx-border-color: #2ecc71; -fx-border-radius: 25; -fx-border-width: 2;" text="Cancel" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="70.0" right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton onAction="#sell" prefHeight="161.0" prefWidth="130.0" style="-fx-border-color: #2ecc71; -fx-border-radius: 25; -fx-border-width: 2;" text="Sell" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="70.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </AnchorPane>
+        </children>
+    </VBox>
+</children>
+</AnchorPane>
