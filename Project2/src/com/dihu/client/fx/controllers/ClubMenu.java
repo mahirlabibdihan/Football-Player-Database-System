@@ -36,7 +36,7 @@ public class ClubMenu extends Controller {
 
         HBox row = new HBox(dollar, l);
         row.setAlignment(Pos.CENTER_LEFT);
-        AnchorPane.setLeftAnchor(row, 50.0);
+        AnchorPane.setLeftAnchor(row, 40.0);
         AnchorPane.setTopAnchor(row, 20.0);
         anchorPane.getChildren().add(row);
     }
