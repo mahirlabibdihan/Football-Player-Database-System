@@ -10,7 +10,7 @@ public class NetworkUtil {
     private final ObjectOutputStream oos;
     private final ObjectInputStream ois;
 
-    public NetworkUtil(String s, int port) throws IOException {
+    public NetworkUtil(String s, int port) throws Exception {
         this.socket = new Socket(s, port);
         oos = new ObjectOutputStream(socket.getOutputStream());
         ois = new ObjectInputStream(socket.getInputStream());
@@ -34,7 +34,6 @@ public class NetworkUtil {
     public void closeConnection() throws IOException {
         ois.close();
         oos.close();
-        socket.close();
     }
 }
 

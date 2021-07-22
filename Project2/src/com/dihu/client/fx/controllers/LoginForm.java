@@ -21,7 +21,6 @@ public class LoginForm extends Controller {
         LoginDTO loginDTO = new LoginDTO();
         loginDTO.setClubName(clubNameEntry.getText());
         loginDTO.setPassword(passwordEntry.getText());
-
         try {
             client.connectToServer();
             client.getNetworkUtil().write(loginDTO);

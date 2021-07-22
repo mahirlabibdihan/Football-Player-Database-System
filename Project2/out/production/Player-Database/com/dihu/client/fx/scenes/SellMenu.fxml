@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" stylesheets="@../assets/styles/SellMenu.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.fx.controllers.PlayerDetails">
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" stylesheets="@../assets/styles/SellMenu.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.fx.controllers.PlayerCard">
     <children>
     <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <children>
@@ -60,7 +60,7 @@
                            <font>
                               <Font name="SansSerif Bold" size="14.0" />
                            </font></Label>
-                        <TextField id="price-entry" fx:id="priceEntry" alignment="CENTER" prefHeight="45.0" prefWidth="416.0" promptText="Enter player's price" style="-fx-background-color: transparent; -fx-border-color: #3498db; -fx-border-radius: 50; -fx-border-width: 2;">
+                        <TextField id="price-entry" fx:id="priceEntry" alignment="CENTER" prefHeight="45.0" prefWidth="416.0" promptText="Set price" style="-fx-background-color: transparent; -fx-border-color: #3498db; -fx-border-radius: 50; -fx-border-width: 2;">
                            <VBox.margin>
                               <Insets left="70.0" right="70.0" />
                            </VBox.margin>
@@ -70,7 +70,7 @@
                         </TextField>
                         <HBox prefHeight="45.0" prefWidth="200.0">
                            <children>
-                              <JFXButton fx:id="exitButton" onAction="#cancel" prefHeight="139.0" prefWidth="130.0" style="-fx-border-color: #2ecc71; -fx-border-radius: 25; -fx-border-width: 2;" text="Cancel" textFill="WHITE">
+                              <JFXButton onAction="#cancel" prefHeight="139.0" prefWidth="130.0" style="-fx-border-color: #2ecc71; -fx-border-radius: 25; -fx-border-width: 2;" text="Cancel" textFill="WHITE">
                                  <HBox.margin>
                                     <Insets left="70.0" right="10.0" />
                                  </HBox.margin>
@@ -78,7 +78,7 @@
                                     <Font name="SansSerif Regular" size="12.0" />
                                  </font>
                               </JFXButton>
-                              <JFXButton fx:id="loginButton" onAction="#sell" prefHeight="161.0" prefWidth="130.0" style="-fx-border-color: #2ecc71; -fx-border-radius: 25; -fx-border-width: 2;" text="Sell" textFill="WHITE">
+                              <JFXButton onAction="#sell" prefHeight="161.0" prefWidth="130.0" style="-fx-border-color: #2ecc71; -fx-border-radius: 25; -fx-border-width: 2;" text="Sell" textFill="WHITE">
                                  <HBox.margin>
                                     <Insets left="10.0" right="70.0" />
                                  </HBox.margin>

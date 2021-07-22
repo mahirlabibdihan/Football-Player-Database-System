@@ -21,8 +21,8 @@
 
 .glyph-icon {
     -fx-fill: white;
+    -fx-cursor: hand;
 }
 .glyph-icon:hover {
-    -fx-cursor: hand;
     -fx-fill: red;
 }

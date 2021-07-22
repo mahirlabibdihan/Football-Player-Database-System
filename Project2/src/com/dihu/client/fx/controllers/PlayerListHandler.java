@@ -16,15 +16,12 @@ import javafx.scene.layout.VBox;
 
 import java.util.List;
 
-public class PlayerListHandler implements EventHandler<ActionEvent> {
-    private Client client;
+public class PlayerListHandler extends Controller implements EventHandler<ActionEvent> {
     private List<Player> playerList, auctionPlayerList;
 
     public PlayerListHandler(Client client) {
         this.client = client;
     }
-
-    public void setClient(Client client) { this.client = client; }
 
     public VBox getPlayerListUi() {
         VBox list = new VBox();
@@ -55,7 +52,7 @@ public class PlayerListHandler implements EventHandler<ActionEvent> {
             client.getUi().next();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/" + client.getUi().getCurrentScene().getFileName() + ".fxml"));
             Parent root = loader.load();
-            PlayerDetails controller = loader.getController();
+            PlayerCard controller = loader.getController();
             Player p = searchPlayerByName(((JFXButton) event.getSource()).getText());
             controller.setClient(client);
             controller.setPlayer(p);

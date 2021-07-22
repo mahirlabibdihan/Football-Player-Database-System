@@ -36,16 +36,22 @@ public class ReadThreadServer implements Runnable {
 
                         if (c.searchPlayerByName(player.getName()) == null) {
                             Player p = server.getDatabase().searchPlayerByName(player.getName());
-                            p.setClub(c.getName());
-                            p.setPrice(0);
-                            c.addPlayer(p);
-                            server.getDatabase().getOnSell().remove(p);
+                            if(p==null){
+                                networkUtil.write("Player is sold out");
+                            }
+                            else{
+                                p.setClub(c.getName());
+                                p.setPrice(0);
+                                c.addPlayer(p);
+                                server.getDatabase().getOnSell().remove(p);
+                                networkUtil.write(c);
+                            }
                         } else {
                             Player p = c.searchPlayerByName(player.getName());
                             c.removePlayer(p);
                             server.getDatabase().addPlayerOnSell(player);
+                            networkUtil.write(c);
                         }
-                        networkUtil.write(c);
 
                         for(Map.Entry<String, NetworkUtil> m : server.getClientList().entrySet()){
                             m.getValue().write(server.getDatabase().getOnSell());

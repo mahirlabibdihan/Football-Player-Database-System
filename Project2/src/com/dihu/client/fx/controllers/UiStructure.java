@@ -4,7 +4,7 @@ public class UiStructure {
     UiScene currentScene;
 
     public UiStructure() {
-        UiScene playerDetails = new UiScene("PlayerDetails");
+        UiScene playerDetails = new UiScene("PlayerCard");
         UiScene playersMenu = new UiScene("PlayersMenu");
         UiScene clubMenu = new UiScene("ClubMenu");
         UiScene sellMenu = new UiScene("SellMenu");

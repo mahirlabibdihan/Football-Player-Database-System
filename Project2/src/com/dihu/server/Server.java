@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Server {
     private Map<String,NetworkUtil> clientList;
-    public Map<String, String> clubMap;
+    private Map<String, String> clubMap;
     private Database database;
 
     Server() throws Exception {
@@ -22,7 +22,7 @@ public class Server {
             System.out.println("Server starts:" + e);
         }
     }
-    public void serve(Socket clientSocket) throws Exception {
+    private void serve(Socket clientSocket) throws Exception {
         NetworkUtil networkUtil = new NetworkUtil(clientSocket);
         Object o = networkUtil.read();
         if (o != null) {
@@ -52,7 +52,7 @@ public class Server {
             }
         }
     }
-    public void init() throws Exception {
+    private void init() throws Exception {
         database = new Database();
         database.readFromFile();
 
@@ -68,7 +68,7 @@ public class Server {
     public Database getDatabase(){
         return database;
     }
-    public Map<String, String> getClubMap() {
+    private Map<String, String> getClubMap() {
         return clubMap;
     }
     public static void main(String[] args) throws Exception { new Server(); }

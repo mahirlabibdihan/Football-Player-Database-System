@@ -11,7 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Pair;
 
-public class PlayerDetails extends Controller {
+public class PlayerCard extends Controller {
     private Player p;
 
     @FXML
@@ -43,7 +43,7 @@ public class PlayerDetails extends Controller {
         client.getNetworkUtil().write(new Pair<>(client.getClub().getName(), p));
     }
 
-    public void cancel(ActionEvent mouseEvent) throws Exception {
+    public void cancel(ActionEvent actionEvent) throws Exception {
         back(null);
     }
 

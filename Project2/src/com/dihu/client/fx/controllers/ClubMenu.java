@@ -24,7 +24,7 @@ public class ClubMenu extends Controller {
     @FXML
     private AnchorPane anchorPane;
 
-    public void showTotalYearlySalary() {
+    private void showTotalYearlySalary() {
         double total = client.getClub().getTotalYearlySalary();
         Label l = new Label(String.format("%f", total));
         l.setId("salary-label");
@@ -41,7 +41,7 @@ public class ClubMenu extends Controller {
         anchorPane.getChildren().add(row);
     }
 
-    public void showCountryWisePlayerCount() {
+    private void showCountryWisePlayerCount() {
         Map<String, Integer> count = new HashMap<>();
         client.getClub().getCountryWisePlayerCount(count);
         if (count.size() > 0) {

@@ -23,13 +23,13 @@ public class ReadThreadClient implements Runnable {
                 Object o = networkUtil.read();
                 if (o != null) {
                     if (o instanceof Club) {
+                        Club c = (Club) o;
+                        client.setClub(c);
+                        client.getUi().next();
                         Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
                                     try {
-                                        Club c = (Club) o;
-                                        client.setClub(c);
-                                        client.getUi().next();
                                         client.updateScene();
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -38,7 +38,6 @@ public class ReadThreadClient implements Runnable {
                         });
                     }
                     else if(o instanceof List){
-                            System.out.println("FOUND ON SELLL");
                             List<Player> onSell = (List<Player>)o;
                             for(int i=0;i<onSell.size();i++){
                                 System.out.println(onSell.get(i).getName());
@@ -69,7 +68,7 @@ public class ReadThreadClient implements Runnable {
                                 l.setText((String)o);
                             }
                         });
-                        networkUtil.closeConnection();
+                        if(client.getUi().getCurrentScene().getFileName().equals("LoginForm"))networkUtil.closeConnection();
                     }
                 }
             }
