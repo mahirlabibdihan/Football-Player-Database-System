@@ -58,6 +58,13 @@ public class Controller {
         client.updateScene();
     }
 
+    public void home(MouseEvent mouseEvent){
+        while(!client.getUi().getCurrentScene().getFileName().equals("MainMenu")){
+            client.getUi().back();
+        }
+        client.updateScene();
+    }
+
     public void next(ActionEvent actionEvent){
         JFXButton b = (JFXButton) actionEvent.getSource();
         client.getUi().next(Integer.parseInt(b.getId()));

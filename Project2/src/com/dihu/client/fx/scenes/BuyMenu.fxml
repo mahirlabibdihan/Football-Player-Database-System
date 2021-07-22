@@ -19,7 +19,12 @@
                     <children>
                         <FontAwesomeIconView fx:id="BACK" fill="WHITE" glyphName="ARROW_LEFT" onMouseClicked="#back">
                             <HBox.margin>
-                                <Insets right="530.0" />
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                        <FontAwesomeIconView glyphName="HOME" onMouseClicked="#home" size="15">
+                            <HBox.margin>
+                                <Insets left="5.0" right="510.0" />
                             </HBox.margin>
                         </FontAwesomeIconView>
                         <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" size="15">

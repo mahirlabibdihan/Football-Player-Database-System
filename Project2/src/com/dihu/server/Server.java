@@ -22,8 +22,28 @@ public class Server {
             e.printStackTrace();
         }
     }
-    private void login(LoginDTO loginDTO){
-
+    private void login(LoginDTO loginDTO,NetworkUtil networkUtil) throws Exception{
+        try {
+            if (clubMap.get(loginDTO.getClubName()).equals(loginDTO.getPassword())) {     // This line will create exception if there is no club with this name
+                Club c = database.searchClubByName(loginDTO.getClubName());
+                if(clientList.containsKey(c.getName())){    // All the clients of the server should be different clubs
+                    networkUtil.write("You are already logged in");
+                    networkUtil.closeConnection();
+                }else{     // Successful login
+                    clientList.put(c.getName(),networkUtil);
+                    networkUtil.write(c);
+                    networkUtil.write(database.getAuctionPlayerList());
+                    new ReadThreadServer(this, networkUtil);
+                    System.out.println("Client Connected");
+                }
+            } else {    // Password doesn't match with the one in the map
+                networkUtil.write("Incorrect password");
+                networkUtil.closeConnection();
+            }
+        } catch (Exception e) {
+            networkUtil.write("No club with this name");
+            networkUtil.closeConnection();
+        }
     }
     private void serve(Socket clientSocket) {
         try{
@@ -33,27 +53,7 @@ public class Server {
             if (o != null) {
                 if (o instanceof LoginDTO) {
                     LoginDTO loginDTO = (LoginDTO) o;
-                    try {
-                        if (clubMap.get(loginDTO.getClubName()).equals(loginDTO.getPassword())) {     // This line will create exception if there is no club with this name
-                            Club c = database.searchClubByName(loginDTO.getClubName());
-                            if(clientList.containsKey(c.getName())){    // All the clients of the server should be different clubs
-                                networkUtil.write("You are already logged in");
-                                networkUtil.closeConnection();
-                            }else{     // Successful login
-                                clientList.put(c.getName(),networkUtil);
-                                networkUtil.write(c);
-                                networkUtil.write(database.getAuctionPlayerList());
-                                new ReadThreadServer(this, networkUtil);
-                                System.out.println("Client Connected");
-                            }
-                        } else {    // Password doesn't match with the one in the map
-                            networkUtil.write("Incorrect password");
-                            networkUtil.closeConnection();
-                        }
-                    } catch (Exception e) {
-                        networkUtil.write("No club with this name");
-                        networkUtil.closeConnection();
-                    }
+                    login(loginDTO,networkUtil);
                 }
             }
         }catch(Exception e){

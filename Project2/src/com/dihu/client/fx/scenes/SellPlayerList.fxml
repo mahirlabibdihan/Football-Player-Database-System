@@ -15,11 +15,16 @@
             <children>
                 <HBox alignment="CENTER_RIGHT" onMouseDragged="#drag" onMousePressed="#press" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: transparent;">
                     <children>
-                  <FontAwesomeIconView fx:id="BACK" fill="WHITE" glyphName="ARROW_LEFT" onMouseClicked="#back">
-                     <HBox.margin>
-                        <Insets right="530.0" />
-                     </HBox.margin>
-                  </FontAwesomeIconView>
+                        <FontAwesomeIconView fx:id="BACK" fill="WHITE" glyphName="ARROW_LEFT" onMouseClicked="#back">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                        <FontAwesomeIconView glyphName="HOME" onMouseClicked="#home" size="15">
+                            <HBox.margin>
+                                <Insets left="5.0" right="510.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
                         <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" size="15">
                             <HBox.margin>
                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
