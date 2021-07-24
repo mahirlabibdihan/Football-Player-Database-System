@@ -28,7 +28,7 @@ Once the user has made it to the main menu, he can now do operations on the play
 # PLAYERS
 <h5>In the players menu all the players of the club will be shown.
 Under  the players list there is feature of filtering the list according to different attributes like player name,country,position,salary etc.
-On clicking a players name, player's card with full details will be show to the user.</h5>
+On clicking a players name, player's card with full details will be shown to the user.</h5>
 <img src="Screenshots/PlayersMenu.png" width="900">
 <img src="Screenshots/PlayerCard.png" width="900">
 
