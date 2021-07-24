@@ -1,5 +1,5 @@
 # SERVER
-Server will read players data from a text file and store it to the database according to the club.
+<h5>Server will read players data from a text file and store it to the database according to the club.
 Every club has a playerlist and all the players of the database will be divided into them.
 Server needs to be started at a specific port.
 And password will be set for every club. Default password is "admin".
@@ -7,7 +7,7 @@ Club name and password will be mapped together using a HashMap to validate crede
 Server will also contain a map of club name and its corresponding networkUtil.
 Once a client connects to the server with valid credentials, server will create a networkUtil for that and map that to that client's club name.
 And will start a read thread for that client.
-For each client server will create a network util and a read thread.
+For each client server will create a network util and a read thread.</h5>
 
 # CLIENT
 # LOGIN FORM
@@ -22,13 +22,15 @@ Once the user has made it to the main menu, he can now do operations on the play
 <img src="Screenshots/LoginForm.png" width="900">
 
 # MAIN MENU  
-<h6>There are 4 options in the menu. Players, Club, Transfer and Log out.</h6>
+<h5>There are 4 options in the menu. Players, Club, Transfer and Log out.</h5>
 <img src="Screenshots/MainMenu.png" width="900">
 
 # PLAYERS
-In the players menu all the players of the club will be shown.
+<h5>In the players menu all the players of the club will be shown.
 Under  the players list there is feature of filtering the list according to different attributes like player name,country,position,salary etc.
-On clicking a players name, player's card with full details will be show to the user.
+On clicking a players name, player's card with full details will be show to the user.</h5>
+<img src="Screenshots/PlayersMenu.png" width="900">
+<img src="Screenshots/PlayerCard.png" width="900">
 
 # CLUB
 In the club menu there is some info of the club like total yearly salary,country wise player count.
