@@ -50,6 +50,7 @@ Server will remove the player from that club in the database and will add the pl
 Also server will send the new auction player list to every client.</h5>
 <img src="Screenshots/SellPlayerList.png" width="900">
 <img src="Screenshots/SellMenu.png" width="900">
+
 # BUY
 <h5>To buy a player user needs to go to buy menu. There is the list of players on auction. User needs to choose a player from that.
 Then the player's details will be shown. Under that players price will be shown. Users need to click the price to buy player.
