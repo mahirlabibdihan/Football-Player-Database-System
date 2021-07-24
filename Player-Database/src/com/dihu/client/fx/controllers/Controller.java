@@ -36,12 +36,11 @@ public class Controller {
             client.getNetworkUtil().closeConnection();
         }catch(Exception e){
             System.out.println("Not connected to server");
-        }finally{
-            Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-            stage.close();
-            Platform.exit();
-            System.exit(0);
         }
+        Stage stage = (Stage) client.getScene().getWindow();
+        stage.close();
+        Platform.exit();
+        System.exit(0);
     }
 
     @FXML
@@ -51,13 +50,11 @@ public class Controller {
     }
 
     public void back(MouseEvent mouseEvent){
-        System.out.println("BACK");
         client.getUi().back();
         client.updateScene();
     }
 
     public void home(MouseEvent mouseEvent){
-        System.out.println("HOME");
         while(!client.getUi().getCurrentScene().getFileName().equals("MainMenu")){
             client.getUi().back();
         }

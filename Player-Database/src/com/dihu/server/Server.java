@@ -53,7 +53,6 @@ public class Server {
                     // Sending auctionPlayerList to client
                     networkUtil.write(database.getAuctionPlayerList());
                     new ReadThreadServer(this, c.getName());
-                    System.out.println("Client Connected");
                 }
             } else {    // Password doesn't match with the one in the map
                 networkUtil.write("Incorrect password");

@@ -43,8 +43,6 @@ public class ReadThreadClient implements Runnable {
                     else if(o instanceof List){
                             List<Player> onSell = (List<Player>)o;
                             for(int i=0;i<onSell.size();i++){
-                                System.out.println(onSell.get(i).getName());
-                                System.out.println(onSell.get(i).getClub()+" "+client.getClub().getName());
                                 if(onSell.get(i).getClub().equals(client.getClub().getName())){
                                     onSell.remove(i--);
                                 }

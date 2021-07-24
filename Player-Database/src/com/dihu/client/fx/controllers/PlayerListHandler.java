@@ -86,7 +86,6 @@ public class PlayerListHandler extends Controller implements EventHandler<Action
     }
 
     public void setAuctionPlayerList(List<Player> auctionPlayerList) {
-        System.out.println("Auction player list set");
         this.auctionPlayerList = auctionPlayerList;
     }
 

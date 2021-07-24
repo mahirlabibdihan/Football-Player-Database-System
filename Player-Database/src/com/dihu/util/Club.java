@@ -25,11 +25,6 @@ public class Club implements Serializable {
         return playerList;
     }
 
-    public void setPlayerList(List<Player> playerList) {
-        this.playerList = playerList;
-        System.out.println(playerList.size());
-    }
-
     public void addPlayer(Player p) {
         playerList.add(p);     // Adding player to the list
     }
