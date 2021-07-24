@@ -60,3 +60,20 @@ The new auction player list to every client as well.</h5>
 
 # LOG OUT
 <h5>If the user wishes get out of the the database system he needs to click log out button.</h5>
+
+<h5>
+      
+                              LoginForm
+                           _______|_______  
+                           |             |
+                        MainMenu        Exit
+        ___________________|__________________
+        |           |            |           |
+   PlayersMenu  ClubMenu    TransferMenu    LogOut
+        |               _________|_________
+   PlayerCard           |                 |
+                 SellPlayerList   AuctionPlayerList
+                        |                 |
+                    SellMenu           BuyMenu
+
+</h5>
