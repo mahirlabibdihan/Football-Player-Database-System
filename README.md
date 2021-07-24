@@ -33,7 +33,8 @@ On clicking a players name, player's card with full details will be show to the 
 <img src="Screenshots/PlayerCard.png" width="900">
 
 # CLUB
-In the club menu there is some info of the club like total yearly salary,country wise player count.
+<h5>In the club menu there is some info of the club like total yearly salary,country wise player count.</h5>
+<img src="Screenshots/ClubMenu.png" width="900">
 
 # TRANSFER
 In the transfer menu users can change the player list of the club by selling/buying.
