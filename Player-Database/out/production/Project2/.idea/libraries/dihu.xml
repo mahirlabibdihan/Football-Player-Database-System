@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="dihu">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/com/dihu/fontawesomefx-8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/com/dihu/fontawesomefx-commons-9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/com/dihu/SearchBar.fontawesomefx-glyphsbrowser-1.3.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/com/dihu/jfoenix-9.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/com/dihu/jar_files.zip!/" />
+      <root url="jar://$PROJECT_DIR$/com/dihu/fontawesomefx-fontawesome-4.7.0-9.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

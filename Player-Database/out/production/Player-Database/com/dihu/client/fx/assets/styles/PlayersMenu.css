@@ -1,0 +1,38 @@
+#from ,#to{
+    -fx-text-fill: white;
+    -fx-border-color:  #3498db;
+    -fx-prompt-text-fill: #505050;
+    -fx-background-color: transparent;
+    -fx-pref-height: 45;
+    -fx-border-width: 2;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-font-size: 16;
+}
+
+#from{
+    -fx-border-radius: 50 0 0 50;
+}
+
+#to{
+    -fx-border-radius: 0 50 50 0;
+}
+
+#positionLabel{
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-pref-width: 110;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+
+#positionSpinner .text-field{
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+}
+#filterSpinner .text-field{
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}

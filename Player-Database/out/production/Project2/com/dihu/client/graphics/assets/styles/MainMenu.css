@@ -1,0 +1,23 @@
+.jfx-button{
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-font-family: sans-serif;
+    -fx-font-size: 16;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.jfx-button:hover {
+    -fx-font-style: italic;
+    -fx-background-color:  #3498db;
+    -fx-background-radius: 50;
+    -fx-text-fill: black;
+}
+
+.glyph-icon {
+    -fx-fill: white;
+}
+.glyph-icon:hover {
+    -fx-cursor: hand;
+    -fx-fill: red;
+}

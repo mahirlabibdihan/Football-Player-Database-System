@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.fx.controllers.PlayersMenu">
+   <children>
+        <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER_RIGHT" onMouseDragged="#drag" onMousePressed="#press" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+                    <children>
+                        <FontAwesomeIconView fx:id="BACK" fill="WHITE" glyphName="ARROW_LEFT" onMouseClicked="#back">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                          <FontAwesomeIconView glyphName="HOME" onMouseClicked="#home" size="15">
+                             <HBox.margin>
+                                <Insets left="5.0" right="510.0" />
+                             </HBox.margin>
+                          </FontAwesomeIconView>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" size="15">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                    </children>
+                </HBox>
+                <AnchorPane fx:id="pane" prefHeight="725.0" prefWidth="600.0" style="-fx-background-color: #1a2531; -fx-background-radius: 0 0 10 10; -fx-border-color: #191919; -fx-border-width: 2; -fx-border-radius: 0 0 10 10;">
+                    <children>
+                  <VBox layoutX="102.0" layoutY="62.0" prefWidth="400.0" style="-fx-background-color: #191919; -fx-background-radius: 25;" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="90.0">
+                     <children>
+                                <Label alignment="CENTER" maxHeight="-Infinity" prefHeight="114.0" prefWidth="412.0" text="PLAYERS" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                                    </font></Label>
+                                <ScrollPane prefHeight="260.0" prefWidth="396.0" style="-fx-background: #191919; -fx-background-color: #191919;">
+                                    <content>
+                                        <AnchorPane fx:id="playerListPane" minHeight="0.0" minWidth="0.0" prefWidth="377.0" style="-fx-background-color: #191919;">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </AnchorPane>
+                                    </content>
+                                    <VBox.margin>
+                                        <Insets bottom="30.0" left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </ScrollPane>
+                        <HBox prefHeight="30.0" prefWidth="412.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="115.0" text="FILTER" textFill="WHITE">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Bold" size="16.0" />
+                                 </font></Label>
+                              <Spinner fx:id="filterSpinner" prefHeight="30.0" prefWidth="169.0">
+                                  <styleClass>
+                                      <String fx:value="arrows-on-left-horizontal" />
+                                  </styleClass>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="70.0" right="70.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="filterInput" prefHeight="45.0" prefWidth="412.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="20.0" prefWidth="426.0" textFill="RED">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+   <stylesheets>
+      <URL value="@../assets/styles/PlayersMenu.css" />
+      <URL value="@../assets/styles/StyleSheet.css" />
+   </stylesheets>
+</AnchorPane>
