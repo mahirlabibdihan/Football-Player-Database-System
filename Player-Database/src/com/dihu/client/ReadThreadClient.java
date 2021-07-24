@@ -22,6 +22,7 @@ public class ReadThreadClient implements Runnable {
             while (true) {
                 Object o = networkUtil.read();
                 if (o != null) {
+                    // Client's club
                     if (o instanceof Club) {
                         Club c = (Club) o;
                         client.setClub(c);
@@ -37,6 +38,8 @@ public class ReadThreadClient implements Runnable {
                             }
                         });
                     }
+
+                    // Auction player list
                     else if(o instanceof List){
                             List<Player> onSell = (List<Player>)o;
                             for(int i=0;i<onSell.size();i++){

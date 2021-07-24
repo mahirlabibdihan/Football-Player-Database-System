@@ -5,8 +5,8 @@ import java.util.List;
 
 public class UiScene {
     private UiScene prevScene;
-    private List<UiScene> nextScenes;
-    private String fileName;
+    private final List<UiScene> nextScenes;
+    private final String fileName;
 
     public UiScene(String fileName) {
         this.fileName = fileName;
@@ -25,10 +25,7 @@ public class UiScene {
         prevScene = scene;
     }
 
-    public void addNextScene(UiScene scene) {
-        UiScene nextScene = scene;
-        nextScenes.add(nextScene);
-    }
+    public void addNextScene(UiScene scene) { nextScenes.add(scene); }
 
     public List<UiScene> getNextScenes() {
         return nextScenes;

@@ -5,8 +5,9 @@ import java.util.Map;
 
 public class ReadThreadServer implements Runnable {
     private final Thread thr;
-    private String clubName;
-    private Server server;
+    private final Server server;
+    private final String clubName;
+
 
     public ReadThreadServer(Server server, String clubName) {
         this.server = server;

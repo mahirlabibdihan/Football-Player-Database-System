@@ -21,8 +21,8 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Server {
-    private ConcurrentHashMap<String,NetworkUtil> clientMap;
-    private ConcurrentHashMap<String, String> clubMap;
+    private Map<String,NetworkUtil> clientMap;
+    private Map<String, String> clubMap;
     private Database database;
 
     Server() {
@@ -93,7 +93,7 @@ public class Server {
         clientMap = new ConcurrentHashMap<>();
 
         // Club name and password map
-        clubMap = new ConcurrentHashMap<>();;
+        clubMap = new ConcurrentHashMap<>();
         for(Club c:database.getClubList()){
             clubMap.put(c.getName(), "admin");
         }

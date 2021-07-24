@@ -4,9 +4,7 @@ import com.dihu.util.Club;
 import com.dihu.util.Player;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +14,7 @@ public class Database {
     private List<Player> auctionPlayerList;
 
     public Database(){
-        auctionPlayerList = new ArrayList<Player>();
+        auctionPlayerList = new ArrayList<>();
     }
 
     public List<Club> getClubList(){
@@ -52,9 +50,9 @@ public class Database {
 
     public void addPlayer(Player p) {
         // Searching the clublist for the club of the player
-        for (int i = 0; i < clubList.size(); i++) {
-            if (clubList.get(i).getName().equalsIgnoreCase(p.getClub())) {
-                clubList.get(i).addPlayer(p);   // Add the player to the club
+        for (Club c:clubList) {
+            if (c.getName().equalsIgnoreCase(p.getClub())) {
+                c.addPlayer(p);   // Add the player to the club
                 return;
             }
         }
