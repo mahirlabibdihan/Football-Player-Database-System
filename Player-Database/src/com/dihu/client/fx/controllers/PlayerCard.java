@@ -9,7 +9,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.util.Pair;
 
 public class PlayerCard extends Controller {
     private Player p;
@@ -33,7 +32,7 @@ public class PlayerCard extends Controller {
                 errorLabel.setText("Must be a Positive double");
                 return;
             }
-            client.getNetworkUtil().write(new Pair<>(client.getClub().getName(), p));
+            client.getNetworkUtil().write(p);
         } catch (Exception e) {
             errorLabel.setText("Must be a double");
         }
@@ -41,7 +40,7 @@ public class PlayerCard extends Controller {
 
     public void buy(ActionEvent actionEvent) {
         try{
-            client.getNetworkUtil().write(new Pair<>(client.getClub().getName(), p));
+            client.getNetworkUtil().write(p);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -57,7 +56,7 @@ public class PlayerCard extends Controller {
             buyButton.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> buyButton.setText("BUY"));
             buyButton.addEventHandler(MouseEvent.MOUSE_EXITED, e -> buyButton.setText(String.format("%.1f", p.getPrice()) + " $"));
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -66,7 +65,7 @@ public class PlayerCard extends Controller {
         name.setText(p.getName().toUpperCase());
         face.setImage(new Image(getClass().getResource("../assets/images/player/" + p.getName() + ".png").toExternalForm()));
         country.setImage(new Image(getClass().getResource("../assets/images/country/" + p.getCountry() + ".png").toExternalForm()));
-        club.setImage(new Image(getClass().getResource("../assets/images/club/" + p.getClub() + ".png").toExternalForm()));  // Bug: p.getClub()
+        club.setImage(new Image(getClass().getResource("../assets/images/club/" + p.getClub() + ".png").toExternalForm()));
         age.setText(p.getAge() + " years");
         height.setText(p.getHeight() + " meters");
         position.setText(p.getPosition());

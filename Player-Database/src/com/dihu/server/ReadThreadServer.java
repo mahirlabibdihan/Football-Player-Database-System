@@ -1,7 +1,6 @@
 package com.dihu.server;
 
 import com.dihu.util.*;
-import javafx.util.Pair;
 import java.util.Map;
 
 public class ReadThreadServer implements Runnable {
@@ -22,28 +21,26 @@ public class ReadThreadServer implements Runnable {
                 Object o = server.getClientMap().get(clubName).read();
                 if (o != null) {
                     // BUY/SELL
-                    if (o instanceof Pair) {
-                        Pair pr = (Pair) o;
-                        String club = (String) pr.getKey();
-                        Club c = server.getDatabase().searchClubByName(club);
-                        Player player = (Player) pr.getValue();
+                    if (o instanceof Player) {
+                        Player p = (Player) o;
+                        Club c = server.getDatabase().searchClubByName(p.getClub());
 
-                        if (c.searchPlayerByName(player.getName()) == null) {   // Player doesn't exists in the club . That means  the club is trying to buy this player
-                            Player p = server.getDatabase().searchPlayerByNameInAuction(player.getName());
-                            if(p==null) {
+                        if (c.searchPlayerByName(p.getName()) == null) {   // Player doesn't exists in the club . That means  the club is trying to buy this player
+                            Player p1 = server.getDatabase().searchPlayerByNameInAuction(p.getName());
+                            if(p1==null) {
                                 server.getClientMap().get(clubName).write("Player is sold out");
                             }
                             else{
-                                p.setClub(c.getName());
-                                p.setPrice(0);
-                                c.addPlayer(p);
-                                server.getDatabase().getAuctionPlayerList().remove(p);
+                                p1.setClub(c.getName());
+                                p1.setPrice(0);
+                                c.addPlayer(p1);
+                                server.getDatabase().getAuctionPlayerList().remove(p1);
                                 server.getClientMap().get(clubName).write(c);
                             }
                         } else {    // The club is trying to sell this player
-                            Player p = c.searchPlayerByName(player.getName());
-                            c.removePlayer(p);
-                            server.getDatabase().addPlayerForAuction(player);
+                            Player p2 = c.searchPlayerByName(p.getName());
+                            c.removePlayer(p2);
+                            server.getDatabase().addPlayerForAuction(p);
                             server.getClientMap().get(clubName).write(c);
                         }
 

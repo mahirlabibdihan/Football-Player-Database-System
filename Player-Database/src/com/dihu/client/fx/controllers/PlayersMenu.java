@@ -263,7 +263,7 @@ public class PlayersMenu extends Controller{
     @Override
     public void init() {
         reset();
-        filterValueFactory = new SpinnerValueFactory.ListSpinnerValueFactory<String>(
+        filterValueFactory = new SpinnerValueFactory.ListSpinnerValueFactory<>(
                 FXCollections.observableArrayList(
                         "",
                         "NAME",

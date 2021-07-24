@@ -18,10 +18,11 @@ import com.dihu.server.data.Database;
 import com.dihu.util.*;
 import java.net.*;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Server {
-    private Map<String,NetworkUtil> clientMap;
-    private Map<String, String> clubMap;
+    private ConcurrentHashMap<String,NetworkUtil> clientMap;
+    private ConcurrentHashMap<String, String> clubMap;
     private Database database;
 
     Server() {
@@ -89,10 +90,10 @@ public class Server {
         }
 
         // Connected client list
-        clientMap = new HashMap<>();
+        clientMap = new ConcurrentHashMap<>();
 
         // Club name and password map
-        clubMap = new HashMap<>();;
+        clubMap = new ConcurrentHashMap<>();;
         for(Club c:database.getClubList()){
             clubMap.put(c.getName(), "admin");
         }
