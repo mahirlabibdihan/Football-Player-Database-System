@@ -11,18 +11,19 @@ For each client server will create a network util and a read thread.
 
 # CLIENT
 # LOGIN FORM
-<h3>First of all login form will be shown to the user.
+<h5>First of all login form will be shown to the user.
 To enter into the player database system user have to enter valid club name and password.
 When user hit the login button the client will connect to server using the ip address and port of the server.
 The the club name and password given by user will go to the server. Server will validate the credentials.
 If the club name and password is valid then server will sent the corresponding club object to the client.
 Also the auction player list will be sent to client as well.
 And the user will prompt to the main menu. If the credentials are invalid then error will be shown to user.
-Once the user has made it to the main menu, he can now do operations on the players of that club.</h3>
+Once the user has made it to the main menu, he can now do operations on the players of that club.</h5>
 <img src="Screenshots/LoginForm.png" width="900">
 
 # MAIN MENU  
-There are 4 options in the menu. Players, Club, Transfer and Log out.
+<h6>There are 4 options in the menu. Players, Club, Transfer and Log out.</h6>
+<img src="Screenshots/MainMenu.png" width="900">
 
 # PLAYERS
 In the players menu all the players of the club will be shown.
