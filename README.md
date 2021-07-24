@@ -11,19 +11,7 @@ For each client server will create a network util and a read thread.</h5>
 
 # CLIENT
 # UI STRUCTURE
-<h5>
-                        LoginForm
-                           |
-                        MainMenu
-        ___________________|__________________
-        |           |            |           |
-   PlayersMenu  ClubMenu    TransferMenu    Exit
-        |               _________|_________
-   PlayerCard           |                 |
-                 SellPlayerList   AuctionPlayerList
-                        |                 |
-                    SellMenu           BuyMenu
-</h5>
+<img src="Screenshots/UI.png" width="900">
 # LOGIN FORM
 <h5>First of all login form will be shown to the user.
 To enter into the player database system user have to enter valid club name and password.
