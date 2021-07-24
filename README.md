@@ -12,6 +12,7 @@ For each client server will create a network util and a read thread.</h5>
 # CLIENT
 # UI STRUCTURE
 <img src="Screenshots/UI.png" width="900">
+
 # LOGIN FORM
 <h5>First of all login form will be shown to the user.
 To enter into the player database system user have to enter valid club name and password.
@@ -62,7 +63,7 @@ The new auction player list to every client as well.</h5>
 <h5>If the user wishes get out of the the database system he needs to click log out button.</h5>
 
 <h5>
-      
+
                               LoginForm
                            _______|_______  
                            |             |
