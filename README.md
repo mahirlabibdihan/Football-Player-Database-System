@@ -19,6 +19,7 @@ If the club name and password is valid then server will sent the corresponding c
 Also the auction player list will be sent to client as well.
 And the user will prompt to the main menu. If the credentials are invalid then error will be shown to user.
 Once the user has made it to the main menu, he can now do operations on the players of that club.
+<img src="Screenshots/LoginForm.png" width="400">
 
 # MAIN MENU  
 There are 4 options in the menu. Players, Club, Transfer and Log out.
