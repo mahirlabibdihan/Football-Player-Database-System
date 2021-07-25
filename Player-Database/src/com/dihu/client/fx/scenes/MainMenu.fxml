@@ -38,28 +38,28 @@
                            <font>
                               <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                            </font></Label>
-                        <JFXButton fx:id="0" layoutX="25.0" layoutY="131.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" style="-fx-border-color: #3498db; -fx-border-radius: 20; -fx-border-width: 2;" styleClass="btn-1" text="PLAYERS" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
+                        <JFXButton fx:id="0" layoutX="25.0" layoutY="131.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="PLAYERS" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
                            <VBox.margin>
                               <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
                            </VBox.margin>
                            <font>
                               <Font size="14.0" />
                            </font></JFXButton>
-                        <JFXButton fx:id="1" layoutX="156.0" layoutY="239.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" style="-fx-border-color: #3498db; -fx-border-radius: 20; -fx-border-width: 2;" styleClass="btn-1" text="CLUB" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0">
+                        <JFXButton fx:id="1" layoutX="156.0" layoutY="239.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="CLUB" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0">
                            <VBox.margin>
                               <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
                            </VBox.margin>
                            <font>
                               <Font size="14.0" />
                            </font></JFXButton>
-                        <JFXButton fx:id="2" layoutX="42.0" layoutY="358.0" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" style="-fx-border-color: #3498db; -fx-border-radius: 20; -fx-border-width: 2;" styleClass="btn-1" text="TRANSFER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="380.0">
+                        <JFXButton fx:id="2" layoutX="42.0" layoutY="358.0" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="TRANSFER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="380.0">
                            <VBox.margin>
                               <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
                            </VBox.margin>
                            <font>
                               <Font size="14.0" />
                            </font></JFXButton>
-                        <JFXButton fx:id="3" layoutX="20.0" layoutY="627.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="45.0" prefWidth="280.0" style="-fx-border-color: #3498db; -fx-border-radius: 20; -fx-border-width: 2;" styleClass="btn-1" text="LOG OUT" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="620.0">
+                        <JFXButton fx:id="3" layoutX="20.0" layoutY="627.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="LOG OUT" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="620.0">
                            <VBox.margin>
                               <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
                            </VBox.margin>

@@ -20,6 +20,12 @@
     -fx-border-radius: 0 50 50 0;
 }
 
+#from:focused , #to:focused{
+    -fx-border-color:  #2ecc71;
+    -fx-background-color: linear-gradient(#151515,#232323);
+    -fx-background-radius: 50;
+}
+
 #positionLabel{
     -fx-text-alignment: center;
     -fx-alignment: center;

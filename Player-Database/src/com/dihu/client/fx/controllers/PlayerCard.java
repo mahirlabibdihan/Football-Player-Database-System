@@ -56,7 +56,7 @@ public class PlayerCard extends Controller {
             buyButton.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> buyButton.setText("BUY"));
             buyButton.addEventHandler(MouseEvent.MOUSE_EXITED, e -> buyButton.setText(String.format("%.1f", p.getPrice()) + " $"));
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Not buy menu");
         }
     }
 

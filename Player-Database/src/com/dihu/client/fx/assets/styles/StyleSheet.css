@@ -1,7 +1,3 @@
-.root{
-    -fx-background-color: #191919;
-}
-
 /*BUTTONS*/
 .btn-1{
     -fx-pref-height: 45;
@@ -18,8 +14,10 @@
 }
 
 .btn-1:hover{
+    -fx-background-radius: 50;
+    -fx-border-color: transparent;
     -fx-font-style: italic;
-    -fx-background-color:  #3498db;
+    -fx-background-color:  linear-gradient(#3498db,#3468db);
     -fx-background-radius: 50;
     -fx-text-fill: black;
 }
@@ -38,26 +36,33 @@
 }
 
 .btn-2:hover{
-    -fx-background-color:  #2ecc71;
+    -fx-background-radius: 50;
+    -fx-border-color: transparent;
+    -fx-background-color:  linear-gradient(#2ecc71,#2ecc51);
     -fx-font-style: italic;
     -fx-text-fill: #191919;
 }
 
 .btn-3{
+    -fx-pref-height: 45;
+    -fx-pref-width: 280;
     -fx-text-fill: white;
-    -fx-border-color:  #2ecc71;
     -fx-background-color: transparent;
-    -fx-background-radius: 25;
+    -fx-font-family: sans-serif;
     -fx-font-size: 16;
     -fx-cursor: hand;
-    -fx-font-family: sans-serif;
     -fx-font-weight: bold;
+    -fx-border-radius: 50;
+    -fx-border-width: 2;
+    -fx-border-color: #2ecc71;
 }
 
 .btn-3:hover{
-    -fx-background-color:  #2ecc71;
-    -fx-text-fill: #191919;
+    -fx-background-radius: 50;
+    -fx-border-color: transparent;
+    -fx-background-color:  linear-gradient(#2ecc71,#2ecc51);
     -fx-font-style: italic;
+    -fx-text-fill: #191919;
 }
 
 
@@ -82,6 +87,8 @@
     -fx-pref-width: 330;
     -fx-max-width: 330;
     -fx-border-color:  #2ecc71;
+    -fx-background-color: linear-gradient(#151515,#232323);
+    -fx-background-radius: 50;
 }
 
 /* SCROLL BAR */

@@ -127,6 +127,7 @@ public class Client extends Application {
         }
     }
 
+    // Setting scene using new fxml file
     public void updateScene() {
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("fx/scenes/"+ui.getCurrentScene().getFileName()+".fxml"));

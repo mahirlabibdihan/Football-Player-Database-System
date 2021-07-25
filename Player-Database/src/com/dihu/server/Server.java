@@ -88,14 +88,14 @@ public class Server {
             e.printStackTrace();
         }
 
-        // Connected client list
-        clientMap = new ConcurrentHashMap<>();
-
         // Club name and password map
         clubMap = new ConcurrentHashMap<>();
         for(Club c:database.getClubList()){
             clubMap.put(c.getName(), "admin");
         }
+
+        // Connected clients
+        clientMap = new ConcurrentHashMap<>();
     }
     public Map<String,NetworkUtil> getClientMap(){
         return clientMap;

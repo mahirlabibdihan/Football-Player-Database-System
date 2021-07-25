@@ -61,6 +61,7 @@ public class ReadThreadClient implements Runnable {
                                 });
                             }
                     }
+                    // Showing error
                     else if(o instanceof String){
                         Platform.runLater(new Runnable() {
                             @Override
