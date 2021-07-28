@@ -1,8 +1,4 @@
 # FOOTBALL PLAYER DATABASE
-<video width="900" controls>
-  <source src="Demo.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
 
 # SERVER
 <h5> Server will read players data from a text file and store it to the database according to the club.
@@ -83,7 +79,7 @@ Minimize:   Minimize the window
 Close:      Close the window   
 </h5>
 
-#EXTRAS
+# EXTRAS
 <h5>  
 Images are used for player face,player card,counrty flag and club badge.
 Sound effects are used on hovering and clicking buttons. 
