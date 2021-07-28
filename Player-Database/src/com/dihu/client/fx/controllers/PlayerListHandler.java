@@ -10,6 +10,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -28,16 +29,17 @@ public class PlayerListHandler extends Controller implements EventHandler<Action
         AnchorPane.setLeftAnchor(list, 10.0);
         list.setSpacing(20);
         for (Player p : playerList) {
-            ImageView country = new ImageView();
-            country.setImage(new Image(getClass().getResource("../assets/images/face/" + p.getName() + ".png").toExternalForm()));
-            country.setFitHeight(45);
-            country.setPreserveRatio(true);
+            ImageView face = new ImageView();
+            face.setImage(new Image(getClass().getResource("../assets/images/face/" + p.getName() + ".png").toExternalForm()));
+            face.setFitHeight(45);
+            face.setPreserveRatio(true);
 
             JFXButton playerButton = new JFXButton(p.getName());
             playerButton.getStyleClass().add("btn-1");
-            playerButton.setOnAction(this);
 
-            HBox row = new HBox(country, playerButton);
+            playerButton.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> hoverSound(null));
+            playerButton.setOnAction(this);
+            HBox row = new HBox(face, playerButton);
             row.setPrefHeight(45);
             row.setAlignment(Pos.CENTER_LEFT);
             row.setSpacing(5);
@@ -48,6 +50,7 @@ public class PlayerListHandler extends Controller implements EventHandler<Action
 
     @Override
     public void handle(ActionEvent event) {
+        clickSound(null);
         try {
             client.getUi().next();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/" + client.getUi().getCurrentScene().getFileName() + ".fxml"));

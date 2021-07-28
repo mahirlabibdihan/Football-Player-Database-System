@@ -7,6 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class Controller {
@@ -50,11 +52,13 @@ public class Controller {
     }
 
     public void back(MouseEvent mouseEvent){
+        clickSound(null);
         client.getUi().back();
         client.updateScene();
     }
 
     public void home(MouseEvent mouseEvent){
+        clickSound(null);
         while(!client.getUi().getCurrentScene().getFileName().equals("MainMenu")){
             client.getUi().back();
         }
@@ -62,11 +66,22 @@ public class Controller {
     }
 
     public void next(ActionEvent actionEvent){
+        clickSound(null);
         JFXButton b = (JFXButton) actionEvent.getSource();
         client.getUi().next(Integer.parseInt(b.getId()));
         client.updateScene();
     }
 
+    public void hoverSound(MouseEvent mouseEvent){
+        Media sound = new Media(getClass().getResource("../assets/sound/hover.wav").toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+    }
+    public void clickSound(MouseEvent mouseEvent){
+        Media sound = new Media(getClass().getResource("../assets/sound/click.wav").toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+    }
     public void init() {
 
     }

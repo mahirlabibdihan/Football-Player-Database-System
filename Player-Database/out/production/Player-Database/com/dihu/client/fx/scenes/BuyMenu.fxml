@@ -12,28 +12,28 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.fx.controllers.PlayerCard">
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.fx.controllers.PlayerCard">
     <children>
         <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <HBox alignment="CENTER_RIGHT" onMouseDragged="#drag" onMousePressed="#press" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: transparent;">
                     <children>
-                        <FontAwesomeIconView fx:id="BACK" fill="WHITE" glyphName="ARROW_LEFT" onMouseClicked="#back">
+                        <FontAwesomeIconView fx:id="BACK" fill="WHITE" glyphName="ARROW_LEFT" onMouseClicked="#back" onMouseEntered="#hoverSound">
                             <HBox.margin>
                                 <Insets right="5.0" />
                             </HBox.margin>
                         </FontAwesomeIconView>
-                        <FontAwesomeIconView glyphName="HOME"  fill="WHITE" onMouseClicked="#home" size="15">
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" onMouseClicked="#home" onMouseEntered="#hoverSound" size="15">
                             <HBox.margin>
                                 <Insets left="5.0" right="510.0" />
                             </HBox.margin>
                         </FontAwesomeIconView>
-                        <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" size="15">
+                        <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" onMouseEntered="#hoverSound" size="15">
                             <HBox.margin>
                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                             </HBox.margin>
                         </FontAwesomeIconView>
-                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15">
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" onMouseEntered="#hoverSound" size="15">
                             <HBox.margin>
                                 <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
                             </HBox.margin>

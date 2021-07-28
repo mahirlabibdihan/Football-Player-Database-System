@@ -17,6 +17,7 @@ public class UiStructure {
     UiScene currentScene;
 
     public UiStructure() {
+        // All the scenes
         UiScene playerDetails = new UiScene("PlayerCard");
         UiScene playersMenu = new UiScene("PlayersMenu");
         UiScene clubMenu = new UiScene("ClubMenu");

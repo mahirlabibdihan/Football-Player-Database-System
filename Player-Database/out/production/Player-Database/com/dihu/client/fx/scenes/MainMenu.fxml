@@ -12,18 +12,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.fx.controllers.MainMenu">
+<AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: #191919; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dihu.client.fx.controllers.MainMenu">
    <children>
       <VBox layoutX="149.0" layoutY="113.0" prefHeight="750.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER_RIGHT" onMouseDragged="#drag" onMousePressed="#press" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: transparent;">
                <children>
-                  <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" size="15">
+                  <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#minimize" onMouseEntered="#hoverSound" size="15">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </FontAwesomeIconView>
-                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15">
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" onMouseEntered="#hoverSound" size="15">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
                      </HBox.margin>
@@ -34,32 +34,32 @@
                <children>
                   <VBox layoutX="250.0" layoutY="241.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #191919; -fx-background-radius: 25;" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="140.0">
                      <children>
-                        <Label alignment="CENTER" layoutX="126.0" layoutY="60.0" maxHeight="-Infinity" prefHeight="114.0" prefWidth="416.0" text="MAIN MENU" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                        <Label alignment="CENTER" layoutX="126.0" layoutY="60.0" maxHeight="-Infinity" prefHeight="114.0" prefWidth="416.0" text="HOME" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                            <font>
                               <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                            </font></Label>
-                        <JFXButton fx:id="0" layoutX="25.0" layoutY="131.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="PLAYERS" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
+                        <JFXButton fx:id="0" layoutX="25.0" layoutY="131.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#next" onMouseEntered="#hoverSound" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="PLAYERS" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
                            <VBox.margin>
                               <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
                            </VBox.margin>
                            <font>
                               <Font size="14.0" />
                            </font></JFXButton>
-                        <JFXButton fx:id="1" layoutX="156.0" layoutY="239.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="CLUB" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0">
+                        <JFXButton fx:id="1" layoutX="156.0" layoutY="239.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#next" onMouseEntered="#hoverSound" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="CLUB" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0">
                            <VBox.margin>
                               <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
                            </VBox.margin>
                            <font>
                               <Font size="14.0" />
                            </font></JFXButton>
-                        <JFXButton fx:id="2" layoutX="42.0" layoutY="358.0" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="TRANSFER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="380.0">
+                        <JFXButton fx:id="2" layoutX="42.0" layoutY="358.0" mnemonicParsing="false" onAction="#next" onMouseEntered="#hoverSound" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="TRANSFER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="380.0">
                            <VBox.margin>
                               <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
                            </VBox.margin>
                            <font>
                               <Font size="14.0" />
                            </font></JFXButton>
-                        <JFXButton fx:id="3" layoutX="20.0" layoutY="627.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="LOG OUT" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="620.0">
+                        <JFXButton fx:id="3" layoutX="20.0" layoutY="627.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#logOut" onMouseEntered="#hoverSound" prefHeight="45.0" prefWidth="280.0" styleClass="btn-1" text="LOG OUT" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="620.0">
                            <VBox.margin>
                               <Insets bottom="10.0" left="70.0" right="70.0" top="10.0" />
                            </VBox.margin>

@@ -7,6 +7,7 @@ import java.util.Map;
 
 public class Club implements Serializable {
     private String name;    // Name of the club
+    private String password;
     private List<Player> playerList;    // List of players under a club
 
     public Club() {
@@ -143,5 +144,13 @@ public class Club implements Serializable {
                 }
             }
         return null;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

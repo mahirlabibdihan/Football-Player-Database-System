@@ -28,7 +28,7 @@ public class NetworkUtil {
 
     public void write(Object o) throws IOException {
         oos.writeUnshared(o);
-        oos.reset();
+        oos.reset();    // Clear the cache
     }
 
     public void closeConnection() throws IOException {

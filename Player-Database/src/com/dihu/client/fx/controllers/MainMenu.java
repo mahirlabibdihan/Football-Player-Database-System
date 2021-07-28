@@ -10,6 +10,7 @@ public class MainMenu extends Controller {
     private ImageView badge;
 
     public void logOut(ActionEvent actionEvent){
+        clickSound(null);
         try{
             client.getNetworkUtil().closeConnection();
             super.back(null);

@@ -1,20 +1,31 @@
+# FOOTBALL PLAYER DATABASE
+<video width="900" controls>
+  <source src="Demo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 # SERVER
-<h5>Server will read players data from a text file and store it to the database according to the club.
+<h5> Server will read players data from a text file and store it to the database according to the club.
 Every club has a playerlist and all the players of the database will be divided into them.
 Server needs to be started at a specific port.
 And password will be set for every club. Default password is "admin".
-Club name and password will be mapped together using a HashMap to validate credentials.
+Club name and password will be mapped together using a ConcurrentHashMap to validate credentials.
 Server will also contain a map of club name and its corresponding networkUtil.
 Once a client connects to the server with valid credentials, server will create a networkUtil for that and map that to that client's club name.
-And will start a read thread for that client.
-For each client server will create a network util and a read thread.</h5>
+And will start a read thread to receive data from that client.
+For each client, server will create a network util and a read thread.
+If client got disconnected from server, server will remove that client from clientMap.</h5>
 
 # CLIENT
 # UI STRUCTURE
+<h5>
+A data structure is maintained for ui to go from one scene to another. And keep track of current scene.      
+</h5>
 <img src="Screenshots/UI.png" width="900">
 
 # LOGIN FORM
-<h5>First of all login form will be shown to the user.
+<h5>First of all login form will be shown to the user. There is two options.
+Exit(to exit the program) and Login(to log in to database).
 To enter into the player database system user have to enter valid club name and password.
 When user hit the login button the client will connect to server using the ip address and port of the server.
 The the club name and password given by user will go to the server. Server will validate the credentials.
@@ -62,3 +73,18 @@ The new auction player list to every client as well.</h5>
 
 # LOG OUT
 <h5>If the user wishes get out of the the database system he needs to click log out button.</h5>
+
+# TITLE BAR
+<h5>
+There 4 buttons in title bar.
+Back:       Go to previous scene
+Home:       Go to main menu
+Minimize:   Minimize the window
+Close:      Close the window   
+</h5>
+
+#EXTRAS
+<h5>  
+Images are used for player face,player card,counrty flag and club badge.
+Sound effects are used on hovering and clicking buttons. 
+</h5> 

@@ -18,6 +18,7 @@ public class LoginForm extends Controller {
 
     @FXML
     public void login(ActionEvent actionEvent) {
+        clickSound(null);
         LoginDTO loginDTO = new LoginDTO();
         loginDTO.setClubName(clubNameEntry.getText());
         loginDTO.setPassword(passwordEntry.getText());
@@ -31,6 +32,7 @@ public class LoginForm extends Controller {
 
     @FXML
     public void exit(ActionEvent actionEvent) {
+        clickSound(null);
         Stage stage = (Stage) ((JFXButton) actionEvent.getSource()).getScene().getWindow();
         stage.close();
         Platform.exit();

@@ -23,6 +23,8 @@
 }
 
 .btn-2{
+    -fx-pref-height: 45;
+    -fx-pref-width: 130;
     -fx-text-fill: white;
     -fx-border-color:  #2ecc71;
     -fx-border-radius: 50;
@@ -87,7 +89,7 @@
     -fx-pref-width: 330;
     -fx-max-width: 330;
     -fx-border-color:  #2ecc71;
-    -fx-background-color: linear-gradient(#151515,#232323);
+    -fx-background-color: linear-gradient(#151515,#242424);
     -fx-background-radius: 50;
 }
 
@@ -138,6 +140,7 @@
     -fx-text-alignment: center;
     -fx-font-family: sans-serif;
     -fx-pref-width: 165;
+    -fx-cursor: pointer;
 }
 
 .spinner .increment-arrow-button , .spinner .decrement-arrow-button{

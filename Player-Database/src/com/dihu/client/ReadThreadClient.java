@@ -8,11 +8,9 @@ import java.util.List;
 public class ReadThreadClient implements Runnable {
     private final Thread thr;
     private final Client client;
-    private final NetworkUtil networkUtil;
 
-    public ReadThreadClient(Client client, NetworkUtil networkUtil) {
+    public ReadThreadClient(Client client) {
         this.client = client;
-        this.networkUtil = networkUtil;
         this.thr = new Thread(this,"Read Thread Client");
         thr.start();
     }
@@ -20,23 +18,25 @@ public class ReadThreadClient implements Runnable {
     public void run() {
         try {
             while (true) {
-                Object o = networkUtil.read();
+                Object o = client.getNetworkUtil().read();
                 if (o != null) {
                     // Client's club
                     if (o instanceof Club) {
                         Club c = (Club) o;
                         client.setClub(c);
-                        client.getUi().next();
-                        Platform.runLater(new Runnable() {
-                            @Override
-                            public void run() {
+                        if(!client.getUi().getCurrentScene().getFileName().equals("ClubMenu")) {
+                            client.getUi().next();
+                            Platform.runLater(new Runnable() {
+                                @Override
+                                public void run() {
                                     try {
                                         client.updateScene();
                                     } catch (Exception e) {
                                         e.printStackTrace();
                                     }
-                            }
-                        });
+                                }
+                            });
+                        }
                     }
 
                     // Auction player list
@@ -70,7 +70,9 @@ public class ReadThreadClient implements Runnable {
                                 l.setText((String)o);
                             }
                         });
-                        if(client.getUi().getCurrentScene().getFileName().equals("LoginForm"))networkUtil.closeConnection();
+                        if(client.getUi().getCurrentScene().getFileName().equals("LoginForm")) {
+                            client.getNetworkUtil().closeConnection();
+                        }
                     }
                 }
             }
@@ -78,7 +80,7 @@ public class ReadThreadClient implements Runnable {
             System.out.println("Connection to server lost");
         } finally {
             try {
-                networkUtil.closeConnection();
+                client.getNetworkUtil().closeConnection();
             } catch (Exception e) {
                 e.printStackTrace();
             }

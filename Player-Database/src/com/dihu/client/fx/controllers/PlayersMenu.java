@@ -9,7 +9,6 @@ import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,6 +93,7 @@ public class PlayersMenu extends Controller{
         });
     }
     private void positionSpinnerListener(Spinner positionSpinner){
+        clickSound(null);
         String position = (String) positionSpinner.getValue();
 
         errorLabel.setText("");
@@ -208,6 +208,7 @@ public class PlayersMenu extends Controller{
     }
     private void filterSpinnerListener(){
         reset();
+        clickSound(null);
         String currentFilter = (String) filterSpinner.getValue();
         if (currentFilter.equals("NAME")) {
             nameFieldSet();

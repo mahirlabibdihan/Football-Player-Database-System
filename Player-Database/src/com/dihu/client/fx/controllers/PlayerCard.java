@@ -2,6 +2,8 @@ package com.dihu.client.fx.controllers;
 
 import com.dihu.util.Player;
 import com.jfoenix.controls.JFXButton;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -33,6 +35,7 @@ public class PlayerCard extends Controller {
                 return;
             }
             client.getNetworkUtil().write(p);
+            clickSound(null);
         } catch (Exception e) {
             errorLabel.setText("Must be a double");
         }
@@ -41,6 +44,7 @@ public class PlayerCard extends Controller {
     public void buy(ActionEvent actionEvent) {
         try{
             client.getNetworkUtil().write(p);
+            clickSound(null);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -53,7 +57,10 @@ public class PlayerCard extends Controller {
     public void setPrice(double price) {
         try {
             buyButton.setText(String.format("%.1f", price) + " $");
-            buyButton.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> buyButton.setText("BUY"));
+            buyButton.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> {
+                hoverSound(null);
+                buyButton.setText("BUY");
+            });
             buyButton.addEventHandler(MouseEvent.MOUSE_EXITED, e -> buyButton.setText(String.format("%.1f", p.getPrice()) + " $"));
         } catch (Exception e) {
             System.out.println("Not buy menu");
@@ -71,5 +78,26 @@ public class PlayerCard extends Controller {
         position.setText(p.getPosition());
         weeklySalary.setText(p.getWeeklySalary() + " $");
         number.setText(Integer.toString(p.getNumber()));
+
+        // Sell price validation
+        try {
+            priceEntry.textProperty().addListener(new ChangeListener<Object>() {
+                @Override
+                public void changed(ObservableValue<? extends Object> observableValue, Object o, Object t1) {
+                    errorLabel.setText("");
+                    try {
+                        p.setPrice(Double.parseDouble(priceEntry.getText()));
+                        if (p.getPrice() < 0) {
+                            errorLabel.setText("Must be a Positive double");
+                        }
+                    } catch (Exception e) {
+                        if (!priceEntry.getText().equals(""))
+                            errorLabel.setText("Must be a double");
+                    }
+                }
+            });
+        }catch(Exception e){
+            System.out.println("Not sell menu");
+        }
     }
 }

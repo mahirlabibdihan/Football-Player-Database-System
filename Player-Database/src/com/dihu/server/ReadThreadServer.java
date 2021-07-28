@@ -4,7 +4,6 @@ import com.dihu.util.*;
 import java.util.Map;
 
 public class ReadThreadServer implements Runnable {
-    private final Thread thr;
     private final Server server;
     private final String clubName;
 
@@ -12,8 +11,7 @@ public class ReadThreadServer implements Runnable {
     public ReadThreadServer(Server server, String clubName) {
         this.server = server;
         this.clubName = clubName;
-        this.thr = new Thread(this);
-        thr.start();
+        new Thread(this).start();
     }
 
     public void run() {
@@ -24,7 +22,7 @@ public class ReadThreadServer implements Runnable {
                     // BUY/SELL
                     if (o instanceof Player) {
                         Player p = (Player) o;
-                        Club c = server.getDatabase().searchClubByName(p.getClub());
+                        Club c = server.getDatabase().searchClubByName(clubName);
 
                         if (c.searchPlayerByName(p.getName()) == null) {   // Player doesn't exists in the club . That means  the club is trying to buy this player
                             Player p1 = server.getDatabase().searchPlayerByNameInAuction(p.getName());
@@ -32,10 +30,10 @@ public class ReadThreadServer implements Runnable {
                                 server.getClientMap().get(clubName).write("Player is sold out");
                             }
                             else{
+                                server.getDatabase().getAuctionPlayerList().remove(p1);
                                 p1.setClub(c.getName());
                                 p1.setPrice(0);
                                 c.addPlayer(p1);
-                                server.getDatabase().getAuctionPlayerList().remove(p1);
                                 server.getClientMap().get(clubName).write(c);
                             }
                         } else {    // The club is trying to sell this player
@@ -49,6 +47,15 @@ public class ReadThreadServer implements Runnable {
                         for(Map.Entry<String, NetworkUtil> m : server.getClientMap().entrySet()){
                             m.getValue().write(server.getDatabase().getAuctionPlayerList());
                         }
+                    }else if(o instanceof String){
+                        try{
+                            Club c = server.getDatabase().searchClubByName(clubName);
+                            c.setPassword((String)o);
+                            server.getClientMap().get(clubName).write(c);
+                        }catch(Exception e){
+                            server.getClientMap().get(clubName).write("Can't change password. Try again later.");
+                        }
+
                     }
                 }
             }
