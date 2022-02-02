@@ -2,6 +2,7 @@
 Demo: https://www.youtube.com/watch?v=8O4gWr4d4DU
 <!--https://user-images.githubusercontent.com/62663759/127275833-ac8d6b87-b64f-4839-865d-699ca6e83e60.mp4-->
 <h5>
+Description:<br>
 Project name: Football Player Database System  <br>
 It is based on java networking. For the GUI part JavaFX, JFoenix and CSS is used. Scene builder is used to build the FXML files. And Intellij is used as Java IDE. <br>
 Idea of the GUI is taken from: https://www.youtube.com/watch?v=HV7DtH3J2PU. <br>
