@@ -1,5 +1,6 @@
 # FOOTBALL PLAYER DATABASE
-https://user-images.githubusercontent.com/62663759/127275833-ac8d6b87-b64f-4839-865d-699ca6e83e60.mp4
+Demo: https://www.youtube.com/watch?v=8O4gWr4d4DU
+<!--https://user-images.githubusercontent.com/62663759/127275833-ac8d6b87-b64f-4839-865d-699ca6e83e60.mp4-->
 
 # SERVER
 <h5> Server will read players data from a text file and store it to the database according to the club.
@@ -25,7 +26,7 @@ A data structure is maintained for ui to go from one scene to another. And keep 
 Exit(to exit the program) and Login(to log in to database).
 To enter into the player database system user have to enter valid club name and password.
 When user hit the login button the client will connect to server using the ip address and port of the server.
-The the club name and password given by user will go to the server. Server will validate the credentials.
+Then the club name and password given by user will go to the server. Server will validate the credentials.
 If the club name and password is valid then server will sent the corresponding club object to the client.
 Also the auction player list will be sent to client as well.
 And the user will prompt to the main menu. If the credentials are invalid then error will be shown to user.
