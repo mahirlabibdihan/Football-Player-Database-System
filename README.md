@@ -74,11 +74,11 @@ The new auction player list to every client as well.</h5>
 
 # TITLE BAR
 <h5>
-There are 4 buttons in title bar.
-Back:       Go to previous scene
-Home:       Go to main menu
-Minimize:   Minimize the window
-Close:      Close the window   
+There are 4 buttons in title bar. <br>
+Back:       Go to previous scene <br>
+Home:       Go to main menu <br>
+Minimize:   Minimize the window <br>
+Close:      Close the window  <br>
 </h5>
 
 # EXTRAS
