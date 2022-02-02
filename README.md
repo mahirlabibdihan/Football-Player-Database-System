@@ -1,6 +1,16 @@
 # FOOTBALL PLAYER DATABASE
 Demo: https://www.youtube.com/watch?v=8O4gWr4d4DU
 <!--https://user-images.githubusercontent.com/62663759/127275833-ac8d6b87-b64f-4839-865d-699ca6e83e60.mp4-->
+<h5>
+Project name: Football Player Database System  <br>
+It is based on java networking. For the GUI part JavaFX, JFoenix and CSS is used. Scene builder is used to build the FXML files. And Intellij is used as Java IDE. <br>
+Idea of the GUI is taken from: https://www.youtube.com/watch?v=HV7DtH3J2PU. <br>
+IntelliJ IDEA Community Edition: https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows&code=IIC <br>
+Scene Builder: https://gluonhq.com/products/scene-builder/thanks/?dl=https://download2.gluonhq.com/scenebuilder/16.0.0/install/windows/SceneBuilder-16.0.0.msi <br>
+Java SE 11: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html <br>
+JavaFX: https://gluonhq.com/products/javafx/ <br>
+JFoenix: http://www.jfoenix.com/ <br>
+</h5>
 
 # SERVER
 <h5> Server will read players data from a text file and store it to the database according to the club.
