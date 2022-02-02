@@ -83,6 +83,6 @@ Close:      Close the window  <br>
 
 # EXTRAS
 <h5>  
-Images are used for player face,player card,counrty flag and club badge.
+Images are used for player face,player card,country flag and club badge.
 Sound effects are used on hovering and clicking buttons. 
 </h5> 
